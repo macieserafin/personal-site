@@ -1,0 +1,7 @@
+<form action="http://localhost:5000/api/helloworld" method="POST">
+        <label for="name">Podaj swoje imię:</label>
+        <input type="text" id="name" name="name" required />
+        <button type="submit">Wyślij</button>
+    </form>
+
+    
