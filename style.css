@@ -1,4 +1,4 @@
-/* Global settings */
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -83,7 +83,7 @@ nav ul li a:hover {
     background-color: #2980b9;
 }
 
-/* Main section */
+/* Main */
 main {
     padding: 40px 20px;
     flex: 1;
@@ -93,7 +93,7 @@ main {
     border-radius: 15px;
 }
 
-/* Welcome section */
+/* Welcome */
 #welcome {
     margin-top: -100px;
     height: 100vh;
@@ -130,7 +130,7 @@ main {
     color: #7f8c8d;
 }
 
-/* About Me Section */
+/* About Me */
 #about {
     margin-top: 40px;
     text-align: center;
@@ -202,7 +202,7 @@ main {
 }
 
 
-/* Education Section */
+/* Education */
 #education {
     padding: 60px 20px;
     background-color: #ecf0f1;
@@ -235,7 +235,7 @@ main {
     display: flex;
     margin-bottom: 40px;
     position: relative;
-    padding-left: 40px; /* Added spacing for better visual separation */
+    padding-left: 40px;
 }
 
 .timeline-item .timeline-content {
@@ -297,7 +297,7 @@ main {
     transition: 0.3s;
 }
 
-/* Responsiveness for mobile devices */
+/* Responsiveness */
 @media (max-width: 768px) {
     .timeline-item {
         flex-direction: column;
@@ -317,7 +317,7 @@ main {
     }
 }
 
-/* Skills Section */
+/* Skills */
 #skills {
     padding: 60px 20px;
     background-color: #f8f8f8;
@@ -401,7 +401,7 @@ main {
     }
 }
 
-/* Certificates Section */
+/* Certificates */
 #certificates {
     padding: 60px 20px;
     background-color: #ecf0f1;
@@ -451,7 +451,7 @@ main {
     }
 }
 
-/* Projects Section */
+/* Projects */
 #projects {
     padding: 60px 20px;
     background-color: #f8f8f8;  
@@ -493,7 +493,7 @@ main {
     }
 }
 
-/* Contact Section */
+/* Contact */
 #contact {
     padding: 60px 20px;
     background-color: #ecf0f1; 
