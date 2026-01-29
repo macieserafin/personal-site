@@ -38,6 +38,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    line-height: 1 !important;
 }
 
 .left-side .name {
@@ -205,6 +206,51 @@ main {
     font-size: 18px;
     color: #7f8c8d;
 }
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #7f8c8d;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-indicator .arrow-wrapper {
+    animation: arrow-bounce 2s infinite ease-in-out;
+}
+
+.scroll-indicator .arrow {
+    width: 16px;
+    height: 16px;
+    border-left: 2px solid #7f8c8d;
+    border-bottom: 2px solid #7f8c8d;
+    transform: rotate(-45deg);
+}
+
+@keyframes arrow-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 /* About Me */
 #about {
@@ -489,34 +535,50 @@ main {
     font-size: 32px;
     font-weight: 600;
     color: #2c3e50;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #certificates p {
     text-align: center;
     font-size: 18px;
     color: #7f8c8d;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-#certificates .certificate-container {
+.certificate-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
 }
 
-#certificates .certificate-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    object-fit: contain; 
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    max-width: 320px;
 }
 
-#certificates .certificate-img:hover {
-    transform: scale(3) rotate(-90deg); 
-    
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-img {
+    width: 100%;
+    max-width: 260px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.certificate-label {
+    font-size: 14px;
+    color: #3498db;
+    font-weight: 500;
 }
 
 
