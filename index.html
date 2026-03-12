@@ -234,139 +234,285 @@
             <h2>Projects</h2>
             <p class="center">Selected projects demonstrating my practical experience and learning approach.</p>
 
-                <div class="projects-container">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>PHP ToDoList</h3>
-                            <span class="project-type">PHP / Web App</span>
-                        </div>
+                <div class="projects-group">
+                    <div class="projects-group-header">
+                        <h3>Java Projects</h3>
+                        <p>Java projects focused on backend logic, desktop applications, and structured application design outside of game development.</p>
+                    </div>
 
-                        <p class="project-description">
-                            Backend-focused web application for task management built in pure PHP without frameworks.
-                            The project was created to understand full request–response flow, session handling,
-                            access control, and data persistence. Application logic is separated into dedicated
-                            classes, with manual routing, role-based access (admin defined by configuration),
-                            and CSV-based storage with automatic backup mechanism.
-                        </p>
+                    <div class="projects-container">
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>Currency Monitor</h3>
+                                <span class="project-type">Java / Backend System</span>
+                            </div>
 
-                        <ul class="project-tech">
-                            <li>PHP</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Session Auth</li>
-                            <li>CSV Storage</li>
-                        </ul>
+                            <p class="project-description">
+                                Backend-oriented application designed to automatically fetch, process, and store
+                                foreign exchange rates from the official National Bank of Poland (NBP) API.
+                                The system is built as a modular, multi-module Java application with clear separation
+                                of responsibilities between core business logic, external API integration,
+                                persistence layer, and application runtime.
+                                Exchange rates are periodically updated, validated against duplicates,
+                                stored as historical data, and exposed via a REST API for further consumption.
+                            </p>
 
-                        <div class="project-links">
-                            <a href="https://github.com/macieserafin/PHP-ToDoList" target="_blank" class="project-link github">GitHub</a>
-                            <a href="http://todolist.macieserafin.pl" target="_blank" class="project-link live">Live Demo</a>
-                        </div>
-                    </article>
+                            <ul class="project-tech">
+                                <li>Java</li>
+                                <li>Spring Boot</li>
+                                <li>Multi-module Maven</li>
+                                <li>REST API</li>
+                                <li>PostgreSQL</li>
+                                <li>JPA / Hibernate</li>
+                                <li>Docker</li>
+                                <li>Scheduler</li>
+                                <li>Caching (Caffeine)</li>
+                                <li>Clean Architecture</li>
+                            </ul>
 
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>PHP Library</h3>
-                            <span class="project-type">PHP / Web App</span>
-                        </div>
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/currency-monitor" target="_blank" class="project-link github">
+                                    GitHub
+                                </a>
+                            </div>
+                        </article>
 
-                        <p class="project-description">
-                            Backend-oriented web application for managing a simple book library, built in pure PHP.
-                            The project focuses on understanding basic application architecture, object-oriented
-                            programming, form handling, and data persistence. Domain logic is separated into classes
-                            and utility functions, with CSV used as a lightweight storage layer.
-                        </p>
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>Library Spring</h3>
+                                <span class="project-type">Java / Spring Boot REST API</span>
+                            </div>
 
-                        <ul class="project-tech">
-                            <li>PHP</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>CSV Storage</li>
-                            <li>Object-Oriented Programming (Book model)</li>
-                            <li>Form handling (add / delete)</li>
-                        </ul>
+                            <p class="project-description">
+                                A library management backend built with Spring Boot, designed around REST
+                                endpoints for books, users, libraries, and borrow operations. The project
+                                uses a layered structure with controllers, services, repositories, DTOs,
+                                exception handling, and database persistence, together with filtering and
+                                borrow/return flows for core library operations.
+                            </p>
 
-                        <div class="project-links">
-                            <a href="https://github.com/macieserafin/PHP-Library" target="_blank" class="project-link github">
-                                GitHub
-                            </a>
-                            <a href="http://library.macieserafin.pl" target="_blank" class="project-link live">
-                                Live Demo
-                            </a>
-                        </div>
-                    </article>
+                            <ul class="project-tech">
+                                <li>Java 21</li>
+                                <li>Spring Boot</li>
+                                <li>REST API</li>
+                                <li>Spring Data JPA</li>
+                                <li>PostgreSQL</li>
+                                <li>OpenAPI</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/Library_Spring" target="_blank" class="project-link github">
+                                    GitHub
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>TaskManager</h3>
+                                <span class="project-type">Java / Swing Desktop App</span>
+                            </div>
+
+                            <p class="project-description">
+                                A simple desktop task manager built in Java Swing to practice creating GUI
+                                applications, handling user input, and organizing application logic around a
+                                dedicated task model and manager class. The app allows adding tasks with a
+                                name, description, and priority, displaying them in a list, and removing
+                                selected items from the interface.
+                            </p>
+
+                            <ul class="project-tech">
+                                <li>Java 17</li>
+                                <li>Java Swing</li>
+                                <li>Maven</li>
+                                <li>Desktop GUI</li>
+                                <li>Builder Pattern</li>
+                                <li>In-Memory Task List</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/TaskManager" target="_blank" class="project-link github">
+                                    GitHub
+                                </a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
 
 
-                <div class="projects-container">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Currency Monitor</h3>
-                            <span class="project-type">Java / Backend System</span>
-                        </div>
+                <div class="projects-group">
+                    <div class="projects-group-header">
+                        <h3>Java Games</h3>
+                        <p>Game-focused Java projects exploring gameplay systems, rendering, interaction, and custom game architecture.</p>
+                    </div>
 
-                        <p class="project-description">
-                            Backend-oriented application designed to automatically fetch, process, and store
-                            foreign exchange rates from the official National Bank of Poland (NBP) API.
-                            The system is built as a modular, multi-module Java application with clear separation
-                            of responsibilities between core business logic, external API integration,
-                            persistence layer, and application runtime.
-                            Exchange rates are periodically updated, validated against duplicates,
-                            stored as historical data, and exposed via a REST API for further consumption.
-                        </p>
+                    <div class="projects-container">
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>Sisyphus the Mushroom</h3>
+                                <span class="project-type">Java / 2D Desktop Game</span>
+                            </div>
 
-                        <ul class="project-tech">
-                            <li>Java</li>
-                            <li>Spring Boot</li>
-                            <li>Multi-module Maven</li>
-                            <li>REST API</li>
-                            <li>PostgreSQL</li>
-                            <li>JPA / Hibernate</li>
-                            <li>Docker</li>
-                            <li>Scheduler</li>
-                            <li>Caching (Caffeine)</li>
-                            <li>Clean Architecture</li>
-                        </ul>
+                            <p class="project-description">
+                                A larger top-down 2D game project built in Java with a custom game loop,
+                                tile-based world, NPC interaction, collectible items, and both ranged and
+                                melee combat modes. The project also includes audio, map resources, collision
+                                handling, bullets, and a separate map editor, making it a broader exercise in
+                                gameplay systems and game architecture.
+                            </p>
 
-                        <div class="project-links">
-                            <a href="https://github.com/macieserafin/currency-monitor" target="_blank" class="project-link github">
-                                GitHub
-                            </a>
-                        </div>
-                    </article>
+                            <ul class="project-tech">
+                                <li>Java</li>
+                                <li>Java Swing</li>
+                                <li>2D Tile Engine</li>
+                                <li>Game Loop</li>
+                                <li>Combat System</li>
+                                <li>Map Editor</li>
+                            </ul>
 
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Visual Novel Engine</h3>
-                            <span class="project-type">Java / Game Engine Design</span>
-                        </div>
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/Sisyphus-the-Mushroom" target="_blank" class="project-link github">
+                                    GitHub
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>Visual Novel Engine</h3>
+                                <span class="project-type">Java / Game Engine Design</span>
+                            </div>
 
-                        <p class="project-description">
-                            A custom Java-based narrative engine designed to handle story progression,
-                            player choices, and game state in visual novel–style applications.
-                            The engine focuses on modeling narrative flow and decision logic,
-                            allowing stories to branch and react to player actions while remaining
-                            completely independent from UI, graphics, or rendering layers.
-                            The project was built to practice designing flexible, state-driven systems
-                            and clean separation of responsibilities.
-                        </p>
+                            <p class="project-description">
+                                A custom Java-based narrative engine designed to handle story progression,
+                                player choices, and game state in visual novel-style applications.
+                                The engine focuses on modeling narrative flow and decision logic,
+                                allowing stories to branch and react to player actions while remaining
+                                completely independent from UI, graphics, or rendering layers.
+                                The project was built to practice designing flexible, state-driven systems
+                                and clean separation of responsibilities.
+                            </p>
 
-                        <ul class="project-tech">
-                            <li>Java</li>
-                            <li>Gradle</li>
-                            <li>Engine Architecture</li>
-                            <li>State Management</li>
-                            <li>Clean Object Model</li>
-                            <li>Story Flow Control</li>
-                            <li>Branching Logic</li>
-                            <li>Custom Framework Design</li>
-                        </ul>
+                            <ul class="project-tech">
+                                <li>Java</li>
+                                <li>Gradle</li>
+                                <li>Engine Architecture</li>
+                                <li>State Management</li>
+                                <li>Clean Object Model</li>
+                                <li>Story Flow Control</li>
+                                <li>Branching Logic</li>
+                                <li>Custom Framework Design</li>
+                            </ul>
 
-                        <div class="project-links">
-                            <a href="https://github.com/macieserafin/VisualNovelEngine" target="_blank" class="project-link github">
-                                GitHub
-                            </a>
-                        </div>
-                    </article>
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/VisualNovelEngine" target="_blank" class="project-link github">
+                                    GitHub
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>Flappy Bird</h3>
+                                <span class="project-type">Java / Swing Desktop Game</span>
+                            </div>
+
+                            <p class="project-description">
+                                A desktop implementation of Flappy Bird built in Java Swing with a custom
+                                game loop, keyboard controls, collision detection, scoring system, and
+                                restart flow. The project also includes background music and sound effects,
+                                making it a practical exercise in combining gameplay logic, rendering, and
+                                audio handling in a simple 2D Java game.
+                            </p>
+
+                            <ul class="project-tech">
+                                <li>Java 22</li>
+                                <li>Java Swing</li>
+                                <li>Game Loop</li>
+                                <li>Collision Detection</li>
+                                <li>Keyboard Input</li>
+                                <li>Audio Effects</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/Flappy-Bird-Java-Swing" target="_blank" class="project-link github">
+                                    GitHub
+                                </a>
+                            </div>
+                        </article>
+
+                
+                    </div>
+                </div>
+
+
+                <div class="projects-group">
+                    <div class="projects-group-header">
+                        <h3>PHP Projects</h3>
+                        <p>Projects built in PHP to practice web application flow, form handling, authentication, and lightweight data persistence.</p>
+                    </div>
+
+                    <div class="projects-container">
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>PHP ToDoList</h3>
+                                <span class="project-type">PHP / Web App</span>
+                            </div>
+
+                            <p class="project-description">
+                                Backend-focused web application for task management built in pure PHP without frameworks.
+                                The project was created to understand full request-response flow, session handling,
+                                access control, and data persistence. Application logic is separated into dedicated
+                                classes, with manual routing, role-based access (admin defined by configuration),
+                                and CSV-based storage with automatic backup mechanism.
+                            </p>
+
+                            <ul class="project-tech">
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Session Auth</li>
+                                <li>CSV Storage</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/PHP-ToDoList" target="_blank" class="project-link github">GitHub</a>
+                                <a href="http://todolist.macieserafin.pl" target="_blank" class="project-link live">Live Demo</a>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3>PHP Library</h3>
+                                <span class="project-type">PHP / Web App</span>
+                            </div>
+
+                            <p class="project-description">
+                                Backend-oriented web application for managing a simple book library, built in pure PHP.
+                                The project focuses on understanding basic application architecture, object-oriented
+                                programming, form handling, and data persistence. Domain logic is separated into classes
+                                and utility functions, with CSV used as a lightweight storage layer.
+                            </p>
+
+                            <ul class="project-tech">
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>CSV Storage</li>
+                                <li>Object-Oriented Programming (Book model)</li>
+                                <li>Form handling (add / delete)</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="https://github.com/macieserafin/PHP-Library" target="_blank" class="project-link github">
+                                    GitHub
+                                </a>
+                                <a href="http://library.macieserafin.pl" target="_blank" class="project-link live">
+                                    Live Demo
+                                </a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
         </section>
         
