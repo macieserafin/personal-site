@@ -379,33 +379,38 @@
                         
                         <article class="project-card">
                             <div class="project-header">
-                                <h3>Visual Novel Engine</h3>
-                                <span class="project-type">Java / Game Engine Design</span>
+                                <h3>TextNovelEngine</h3>
+                                <span class="project-type">Java / Narrative Engine Runtime</span>
                             </div>
 
                             <p class="project-description">
-                                A custom Java-based narrative engine designed to handle story progression,
-                                player choices, and game state in visual novel-style applications.
-                                The engine focuses on modeling narrative flow and decision logic,
-                                allowing stories to branch and react to player actions while remaining
-                                completely independent from UI, graphics, or rendering layers.
-                                The project was built to practice designing flexible, state-driven systems
-                                and clean separation of responsibilities.
+                                Java-based narrative engine for running text visual novels as external story modules.
+                                The runtime is built around a hierarchical content structure
+                                (Story -> Day -> Section -> Scene -> Block) and supports
+                                Narrative, Dialogue, Monologue, Choice, and Action blocks.
+                                Stories are discovered from a dedicated directory, compiled at runtime,
+                                loaded dynamically, and started from a selected scene.
+                                The engine includes branching options, scene jumps, structured navigation targets,
+                                a custom Swing reader window with typewriter-style rendering,
+                                toolbar-based controls, and a state-driven flow covering menu, gameplay,
+                                settings, and creator screens.
                             </p>
 
                             <ul class="project-tech">
                                 <li>Java</li>
+                                <li>Swing UI</li>
                                 <li>Gradle</li>
                                 <li>Engine Architecture</li>
                                 <li>State Management</li>
-                                <li>Clean Object Model</li>
-                                <li>Story Flow Control</li>
+                                <li>Hierarchical Story Model</li>
+                                <li>External Story Loading</li>
+                                <li>Runtime Compilation</li>
                                 <li>Branching Logic</li>
-                                <li>Custom Framework Design</li>
+                                <li>Custom Runtime Design</li>
                             </ul>
 
                             <div class="project-links">
-                                <a href="https://github.com/macieserafin/VisualNovelEngine" target="_blank" class="project-link github">
+                                <a href="https://github.com/macieserafin/TextNovelEngine" target="_blank" class="project-link github">
                                     GitHub
                                 </a>
                             </div>
