@@ -3,58 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maciej Serafin - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Portfolio of Maciej Serafin - computer science student focused on Java backend development and practical software projects.">
+    <title>Maciej Serafin | Backend Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <header>
-        <div class="left-side">
-            <a href="#" class="name">Maciej Serafin</a>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a href="#welcome" class="brand">Maciej Serafin</a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                Menu
+            </button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Background</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="right-side">
-            <ul id="nav-list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Background</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>            
-            </ul>
-            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                &#9776;
-            </a>
-        </nav>
     </header>
-    
+
     <main>
-        <section id="welcome">
-            <div class="welcome-container">
-                <div class="welcome-box">
+        <section id="welcome" class="section hero">
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="eyebrow">Computer Science Student</p>
                     <h1>Hi, I'm Maciej Serafin</h1>
                     <p>
-                        I’m a computer science student.
-                        This website contains selected projects and a summary of my technical background.
+                        This portfolio brings together selected projects and a concise overview of my technical background.
+                        It reflects skills developed through university coursework, personal applications, and everyday problem solving,
+                        while showing how I continue to grow across different technologies.
                     </p>
-                </div>
-            </div>
 
-            <a href="#about" class="scroll-indicator">
-                <span>Scroll down</span>
-                <div class="arrow-wrapper">
-                    <div class="arrow"></div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="https://github.com/macieserafin" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub Profile</a>
+                    </div>
+
+                    <ul class="hero-metrics" aria-label="Quick profile highlights">
+                        <li>
+                            <strong>2024</strong>
+                            <span>Started CS studies at PJATK</span>
+                        </li>
+                        <li>
+                            <strong>4th Semester</strong>
+                            <span>Building broad foundations in software engineering</span>
+                        </li>
+                        <li>
+                            <strong>2021+</strong>
+                            <span>Professional work experience outside university</span>
+                        </li>
+                    </ul>
                 </div>
-            </a>
+
+                <aside class="hero-card" aria-label="Current focus">
+                    <h2>Current Focus</h2>
+                    <ul>
+
+                    </ul>
+                </aside>
+            </div>
         </section>
 
-        <section id="about">
-            <div class="about-container">
-                <div class="about-left">
-                    <img src="your-photo.jpg" alt="Maciej Serafin">
-                    <a href="https://github.com/macieserafin" class="github-link" target="_blank">GitHub Profile</a>
+        <section id="about" class="section">
+            <div class="container about-layout">
+                <div class="profile-card">
+                    <img src="your-photo.jpg" alt="Portrait of Maciej Serafin" class="profile-photo">
+                    <div class="profile-links">
+                        <a href="https://github.com/macieserafin" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="mailto:macieserafin@gmail.com">Email</a>
+                    </div>
                 </div>
-                <div class="about-right">
+
+                <div class="about-copy">
+                    <header class="section-head section-head-left">
+                        <h2>About Me</h2>
+                        <p>Student, self-learner, and builder of small to medium software projects.</p>
+                    </header>
+
                     <p>
                         I am a <strong>computer science student</strong> currently learning different areas of
                         <strong>software development</strong>.
@@ -98,440 +133,390 @@
             </div>
         </section>
 
+        <section id="education" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Background</h2>
+                    <p>Education and work milestones that shape my technical and professional development.</p>
+                </header>
 
-        <section id="education">
-            <h2 class="education-title">Background</h2>
-            <div class="timeline-container">
                 <div class="timeline">
-                    <div class="timeline-item">
+                    <article class="timeline-item">
                         <div class="timeline-content">
                             <h3>Technikum - TEB Edukacja, Gdynia</h3>
                             <p>Graduated as an IT specialist with a focus on Microsoft cloud technologies.</p>
                         </div>
-                        <div class="timeline-date">2019 - 2024</div>
-                    </div>
-                    <div class="timeline-item">
+                        <span class="timeline-date">2019 - 2024</span>
+                    </article>
+
+                    <article class="timeline-item">
                         <div class="timeline-content">
                             <h3>Cash Sorting Facility</h3>
-                            <p>Started working in 2021, promoted to <strong>ATM Cash Sorting Supervisor</strong> in 2024.</p>
+                            <p>Started work in 2021 and was promoted to ATM Cash Sorting Supervisor in 2024.</p>
                         </div>
-                        <div class="timeline-date">2021 - Present</div>
-                    </div>
-                    <div class="timeline-item">
+                        <span class="timeline-date">2021 - Present</span>
+                    </article>
+
+                    <article class="timeline-item">
                         <div class="timeline-content">
-                            <h3>PJATK, Gdańsk</h3>
+                            <h3>PJATK, Gdansk</h3>
                             <p>Currently studying Computer Science at the Polish-Japanese Academy of Information Technology.</p>
                         </div>
-                        <div class="timeline-date">2024 - Present</div>
-                    </div>
+                        <span class="timeline-date">2024 - Present</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Here are the skills I've acquired throughout my career and education:</p>
-            
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>C++ (basic)</li>
-                        <li>C# (general knowledge)</li>
-                        <li>Assembly (basic understanding)</li>
-                    </ul>
-                </div>
+        <section id="skills" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Skills</h2>
+                    <p>Core technologies and tools I use while building backend and web projects.</p>
+                </header>
 
-                <div class="skills-category">
-                    <h3>Web & Backend Technologies</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>PHP</li>
-                        <li>JavaScript (basic)</li>
-                    </ul>
-                </div>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <h3>Java Backend</h3>
+                        <ul class="tag-list">
+                            <li>Java</li>
+                            <li>OOP</li>
+                            <li>Spring Boot</li>
+                            <li>REST API Design</li>
+                            <li>JPA / Hibernate</li>
+                            <li>Maven</li>
+                            <li>Gradle</li>
+                            <li>JUnit</li>
+                        </ul>
+                    </article>
 
-                <div class="skills-category">
-                    <h3>Backend & Software Concepts</h3>
-                    <ul>
-                        <li>Object-Oriented Programming (OOP)</li>
-                        <li>Modular application design</li>
-                        <li>Application architecture fundamentals</li>
-                        <li>Learning-by-building approach</li>
-                    </ul>
-                </div>
+                    <article class="skill-card">
+                        <h3>Databases</h3>
+                        <ul class="tag-list">
+                            <li>SQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MariaDB</li>
+                            <li>Schema Design</li>
+                            <li>Relational Data Modeling</li>
+                        </ul>
+                    </article>
 
-                <div class="skills-category">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>PostgreSQL</li>
-                        <li>MariaDB</li>
-                        <li>SQL fundamentals</li>
-                    </ul>
-                </div>
+                    <article class="skill-card">
+                        <h3>Web Foundations</h3>
+                        <ul class="tag-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript (basic)</li>
+                            <li>PHP</li>
+                            <li>HTTP Basics</li>
+                        </ul>
+                    </article>
 
-                <div class="skills-category">
-                    <h3>Operating Systems & Scripting</h3>
-                    <ul>
-                        <li>Linux environment (daily use)</li>
-                        <li>Bash scripting (basic)</li>
-                    </ul>
-                </div>
+                    <article class="skill-card">
+                        <h3>Tools and Collaboration</h3>
+                        <ul class="tag-list">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Docker</li>
+                            <li>IntelliJ IDEA</li>
+                            <li>Swagger / OpenAPI</li>
+                            <li>Postman</li>
+                        </ul>
+                    </article>
 
-                <div class="skills-category">
-                    <h3>DevOps & Hosting</h3>
-                    <ul>
-                        <li>VPS server management</li>
-                        <li>Nginx configuration (basic)</li>
-                        <li>Application deployment</li>
-                        <li>Self-hosted project environments</li>
-                    </ul>
-                </div>
+                    <article class="skill-card">
+                        <h3>Linux and Deployment</h3>
+                        <ul class="tag-list">
+                            <li>Linux (daily use)</li>
+                            <li>Bash</li>
+                            <li>VPS Management</li>
+                            <li>Nginx</li>
+                            <li>App Deployment</li>
+                        </ul>
+                    </article>
 
-                <div class="skills-category">
-                    <h3>Game Servers & Modding</h3>
-                    <ul>
-                        <li>Java-based Minecraft server hosting</li>
-                        <li>Modpack configuration and optimization</li>
-                        <li>Open-source mod modification</li>
-                        <li>Server performance tuning</li>
-                    </ul>
-                </div>
+                    <article class="skill-card">
+                        <h3>Systems and Networking</h3>
+                        <ul class="tag-list">
+                            <li>Computer Networks Basics</li>
+                            <li>Client-Server Architecture</li>
+                            <li>API Integration</li>
+                            <li>CLI Productivity</li>
+                        </ul>
+                    </article>
 
-                <div class="skills-category">
-                    <h3>Build & Tools</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>Maven</li>
-                        <li>Gradle (basic)</li>
-                    </ul>
+                    <article class="skill-card">
+                        <h3>Other Languages</h3>
+                        <ul class="tag-list">
+                            <li>C# (general knowledge)</li>
+                            <li>C++ (basic)</li>
+                            <li>Assembly (basic)</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Hands-On Extras</h3>
+                        <ul class="tag-list">
+                            <li>Minecraft Server Hosting</li>
+                            <li>Modpack Optimization</li>
+                            <li>Open-Source Mod Tweaks</li>
+                            <li>Performance Tuning</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
-        
 
-        <section id="certificates">
-            <h2>Certificates</h2>
-            <p>Formal certification confirming completed IT education.</p>
+        <section id="certificates" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Certificates</h2>
+                    <p>Formal confirmation of completed IT education.</p>
+                </header>
 
-            <div class="certificate-container">
-                <a href="certificate1.jpg" target="_blank" class="certificate-card">
-                    <img 
-                        src="certificate1.jpg" 
-                        alt="IT Technician Certificate" 
-                        class="certificate-img"
-                    >
-                    <span class="certificate-label">View certificate</span>
-                </a>
+                <div class="certificate-layout">
+                    <a href="certificate1.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card">
+                        <img src="certificate1.jpg" alt="IT Technician Certificate" class="certificate-image">
+                        <!-- <span>Open certificate</span> -->
+                    </a>
+                </div>
             </div>
         </section>
-                
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p class="center">Selected projects demonstrating my practical experience and learning approach.</p>
+        <section id="projects" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Projects</h2>
+                    <p>Selected projects that reflect my practical learning and engineering approach.</p>
+                </header>
 
-                <div class="projects-group">
-                    <div class="projects-group-header">
-                        <h3>Java Projects</h3>
-                        <p>Java projects focused on backend logic, desktop applications, and structured application design outside of game development.</p>
-                    </div>
+                <div class="project-groups">
+                    <section class="project-group" aria-labelledby="java-projects-title">
+                        <div class="project-group-head">
+                            <h3 id="java-projects-title">Java Projects</h3>
+                            <p>Backend and desktop projects focused on architecture, API design, and structured application logic.</p>
+                        </div>
 
-                    <div class="projects-container">
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>Currency Monitor</h3>
-                                <span class="project-type">Java / Backend System</span>
-                            </div>
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Currency Monitor</h4>
+                                    <span class="project-badge">Java / Backend System</span>
+                                </div>
+                                <p>
+                                    Modular Java application that fetches, validates, and stores exchange rates from the NBP API.
+                                    It separates business logic, API integration, persistence, and runtime concerns,
+                                    then exposes data through a REST API.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>Java</li>
+                                    <li>Spring Boot</li>
+                                    <li>Multi-module Maven</li>
+                                    <li>REST API</li>
+                                    <li>PostgreSQL</li>
+                                    <li>JPA / Hibernate</li>
+                                    <li>Docker</li>
+                                    <li>Scheduler</li>
+                                    <li>Caffeine Cache</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/currency-monitor" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
 
-                            <p class="project-description">
-                                Backend-oriented application designed to automatically fetch, process, and store
-                                foreign exchange rates from the official National Bank of Poland (NBP) API.
-                                The system is built as a modular, multi-module Java application with clear separation
-                                of responsibilities between core business logic, external API integration,
-                                persistence layer, and application runtime.
-                                Exchange rates are periodically updated, validated against duplicates,
-                                stored as historical data, and exposed via a REST API for further consumption.
-                            </p>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Library Spring</h4>
+                                    <span class="project-badge">Java / Spring Boot REST API</span>
+                                </div>
+                                <p>
+                                    Library management backend with layered architecture and REST endpoints
+                                    for books, users, libraries, and borrow operations.
+                                    Includes DTOs, filtering logic, exception handling, and database persistence.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>Java 21</li>
+                                    <li>Spring Boot</li>
+                                    <li>REST API</li>
+                                    <li>Spring Data JPA</li>
+                                    <li>PostgreSQL</li>
+                                    <li>OpenAPI</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/Library_Spring" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
 
-                            <ul class="project-tech">
-                                <li>Java</li>
-                                <li>Spring Boot</li>
-                                <li>Multi-module Maven</li>
-                                <li>REST API</li>
-                                <li>PostgreSQL</li>
-                                <li>JPA / Hibernate</li>
-                                <li>Docker</li>
-                                <li>Scheduler</li>
-                                <li>Caching (Caffeine)</li>
-                                <li>Clean Architecture</li>
-                            </ul>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>TaskManager</h4>
+                                    <span class="project-badge">Java / Swing Desktop App</span>
+                                </div>
+                                <p>
+                                    Java Swing desktop application for task management built to practice GUI structure,
+                                    user input handling, and clean separation between view and task model logic.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>Java 17</li>
+                                    <li>Java Swing</li>
+                                    <li>Maven</li>
+                                    <li>Builder Pattern</li>
+                                    <li>Desktop GUI</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/TaskManager" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
 
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/currency-monitor" target="_blank" class="project-link github">
-                                    GitHub
-                                </a>
-                            </div>
-                        </article>
+                    <section class="project-group" aria-labelledby="java-games-title">
+                        <div class="project-group-head">
+                            <h3 id="java-games-title">Java Games</h3>
+                            <p>Game-focused projects exploring loops, rendering, interaction systems, and custom architecture.</p>
+                        </div>
 
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>Library Spring</h3>
-                                <span class="project-type">Java / Spring Boot REST API</span>
-                            </div>
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Sisyphus the Mushroom</h4>
+                                    <span class="project-badge">Java / 2D Desktop Game</span>
+                                </div>
+                                <p>
+                                    Top-down game with custom loop, tile map, NPC interactions, collectibles,
+                                    ranged and melee combat, collision handling, audio, and a separate map editor.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>Java</li>
+                                    <li>Java Swing</li>
+                                    <li>2D Tile Engine</li>
+                                    <li>Game Loop</li>
+                                    <li>Combat System</li>
+                                    <li>Map Editor</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/Sisyphus-the-Mushroom" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
 
-                            <p class="project-description">
-                                A library management backend built with Spring Boot, designed around REST
-                                endpoints for books, users, libraries, and borrow operations. The project
-                                uses a layered structure with controllers, services, repositories, DTOs,
-                                exception handling, and database persistence, together with filtering and
-                                borrow/return flows for core library operations.
-                            </p>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>TextNovelEngine</h4>
+                                    <span class="project-badge">Java / Narrative Engine Runtime</span>
+                                </div>
+                                <p>
+                                    Runtime engine for text visual novels with hierarchical story structure,
+                                    dynamic story loading, branching choices, scene jumps, and a custom Swing reader UI.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>Java</li>
+                                    <li>Swing UI</li>
+                                    <li>Gradle</li>
+                                    <li>Engine Architecture</li>
+                                    <li>State Management</li>
+                                    <li>Runtime Compilation</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/TextNovelEngine" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
 
-                            <ul class="project-tech">
-                                <li>Java 21</li>
-                                <li>Spring Boot</li>
-                                <li>REST API</li>
-                                <li>Spring Data JPA</li>
-                                <li>PostgreSQL</li>
-                                <li>OpenAPI</li>
-                            </ul>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Flappy Bird</h4>
+                                    <span class="project-badge">Java / Swing Desktop Game</span>
+                                </div>
+                                <p>
+                                    Desktop Flappy Bird implementation with custom loop, keyboard controls,
+                                    collision logic, scoring, restart flow, and integrated sound effects.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>Java 22</li>
+                                    <li>Java Swing</li>
+                                    <li>Game Loop</li>
+                                    <li>Collision Detection</li>
+                                    <li>Keyboard Input</li>
+                                    <li>Audio Effects</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/Flappy-Bird-Java-Swing" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
 
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/Library_Spring" target="_blank" class="project-link github">
-                                    GitHub
-                                </a>
-                            </div>
-                        </article>
+                    <section class="project-group" aria-labelledby="php-projects-title">
+                        <div class="project-group-head">
+                            <h3 id="php-projects-title">PHP Projects</h3>
+                            <p>Web projects built to practice request flow, authentication, and lightweight persistence.</p>
+                        </div>
 
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>TaskManager</h3>
-                                <span class="project-type">Java / Swing Desktop App</span>
-                            </div>
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>PHP ToDoList</h4>
+                                    <span class="project-badge">PHP / Web App</span>
+                                </div>
+                                <p>
+                                    Pure PHP task management app created to understand full request-response flow,
+                                    session handling, role-based access, and CSV persistence with backup support.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>PHP</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Session Auth</li>
+                                    <li>CSV Storage</li>
+                                </ul>
+                                <div class="project-links two-links">
+                                    <a href="https://github.com/macieserafin/PHP-ToDoList" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <a href="http://todolist.macieserafin.pl" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                                </div>
+                            </article>
 
-                            <p class="project-description">
-                                A simple desktop task manager built in Java Swing to practice creating GUI
-                                applications, handling user input, and organizing application logic around a
-                                dedicated task model and manager class. The app allows adding tasks with a
-                                name, description, and priority, displaying them in a list, and removing
-                                selected items from the interface.
-                            </p>
-
-                            <ul class="project-tech">
-                                <li>Java 17</li>
-                                <li>Java Swing</li>
-                                <li>Maven</li>
-                                <li>Desktop GUI</li>
-                                <li>Builder Pattern</li>
-                                <li>In-Memory Task List</li>
-                            </ul>
-
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/TaskManager" target="_blank" class="project-link github">
-                                    GitHub
-                                </a>
-                            </div>
-                        </article>
-                    </div>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>PHP Library</h4>
+                                    <span class="project-badge">PHP / Web App</span>
+                                </div>
+                                <p>
+                                    Simple book library app in pure PHP focused on object-oriented design,
+                                    form handling, and CSV-based data persistence.
+                                </p>
+                                <ul class="tag-list">
+                                    <li>PHP</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>CSV Storage</li>
+                                    <li>OOP Domain Model</li>
+                                    <li>Form Handling</li>
+                                </ul>
+                                <div class="project-links two-links">
+                                    <a href="https://github.com/macieserafin/PHP-Library" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <a href="http://library.macieserafin.pl" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
                 </div>
-
-
-                <div class="projects-group">
-                    <div class="projects-group-header">
-                        <h3>Java Games</h3>
-                        <p>Game-focused Java projects exploring gameplay systems, rendering, interaction, and custom game architecture.</p>
-                    </div>
-
-                    <div class="projects-container">
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>Sisyphus the Mushroom</h3>
-                                <span class="project-type">Java / 2D Desktop Game</span>
-                            </div>
-
-                            <p class="project-description">
-                                A larger top-down 2D game project built in Java with a custom game loop,
-                                tile-based world, NPC interaction, collectible items, and both ranged and
-                                melee combat modes. The project also includes audio, map resources, collision
-                                handling, bullets, and a separate map editor, making it a broader exercise in
-                                gameplay systems and game architecture.
-                            </p>
-
-                            <ul class="project-tech">
-                                <li>Java</li>
-                                <li>Java Swing</li>
-                                <li>2D Tile Engine</li>
-                                <li>Game Loop</li>
-                                <li>Combat System</li>
-                                <li>Map Editor</li>
-                            </ul>
-
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/Sisyphus-the-Mushroom" target="_blank" class="project-link github">
-                                    GitHub
-                                </a>
-                            </div>
-                        </article>
-                        
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>TextNovelEngine</h3>
-                                <span class="project-type">Java / Narrative Engine Runtime</span>
-                            </div>
-
-                            <p class="project-description">
-                                Java-based narrative engine for running text visual novels as external story modules.
-                                The runtime is built around a hierarchical content structure
-                                (Story -> Day -> Section -> Scene -> Block) and supports
-                                Narrative, Dialogue, Monologue, Choice, and Action blocks.
-                                Stories are discovered from a dedicated directory, compiled at runtime,
-                                loaded dynamically, and started from a selected scene.
-                                The engine includes branching options, scene jumps, structured navigation targets,
-                                a custom Swing reader window with typewriter-style rendering,
-                                toolbar-based controls, and a state-driven flow covering menu, gameplay,
-                                settings, and creator screens.
-                            </p>
-
-                            <ul class="project-tech">
-                                <li>Java</li>
-                                <li>Swing UI</li>
-                                <li>Gradle</li>
-                                <li>Engine Architecture</li>
-                                <li>State Management</li>
-                                <li>Hierarchical Story Model</li>
-                                <li>External Story Loading</li>
-                                <li>Runtime Compilation</li>
-                                <li>Branching Logic</li>
-                                <li>Custom Runtime Design</li>
-                            </ul>
-
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/TextNovelEngine" target="_blank" class="project-link github">
-                                    GitHub
-                                </a>
-                            </div>
-                        </article>
-
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>Flappy Bird</h3>
-                                <span class="project-type">Java / Swing Desktop Game</span>
-                            </div>
-
-                            <p class="project-description">
-                                A desktop implementation of Flappy Bird built in Java Swing with a custom
-                                game loop, keyboard controls, collision detection, scoring system, and
-                                restart flow. The project also includes background music and sound effects,
-                                making it a practical exercise in combining gameplay logic, rendering, and
-                                audio handling in a simple 2D Java game.
-                            </p>
-
-                            <ul class="project-tech">
-                                <li>Java 22</li>
-                                <li>Java Swing</li>
-                                <li>Game Loop</li>
-                                <li>Collision Detection</li>
-                                <li>Keyboard Input</li>
-                                <li>Audio Effects</li>
-                            </ul>
-
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/Flappy-Bird-Java-Swing" target="_blank" class="project-link github">
-                                    GitHub
-                                </a>
-                            </div>
-                        </article>
-
-                
-                    </div>
-                </div>
-
-
-                <div class="projects-group">
-                    <div class="projects-group-header">
-                        <h3>PHP Projects</h3>
-                        <p>Projects built in PHP to practice web application flow, form handling, authentication, and lightweight data persistence.</p>
-                    </div>
-
-                    <div class="projects-container">
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>PHP ToDoList</h3>
-                                <span class="project-type">PHP / Web App</span>
-                            </div>
-
-                            <p class="project-description">
-                                Backend-focused web application for task management built in pure PHP without frameworks.
-                                The project was created to understand full request-response flow, session handling,
-                                access control, and data persistence. Application logic is separated into dedicated
-                                classes, with manual routing, role-based access (admin defined by configuration),
-                                and CSV-based storage with automatic backup mechanism.
-                            </p>
-
-                            <ul class="project-tech">
-                                <li>PHP</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Session Auth</li>
-                                <li>CSV Storage</li>
-                            </ul>
-
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/PHP-ToDoList" target="_blank" class="project-link github">GitHub</a>
-                                <a href="http://todolist.macieserafin.pl" target="_blank" class="project-link live">Live Demo</a>
-                            </div>
-                        </article>
-
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>PHP Library</h3>
-                                <span class="project-type">PHP / Web App</span>
-                            </div>
-
-                            <p class="project-description">
-                                Backend-oriented web application for managing a simple book library, built in pure PHP.
-                                The project focuses on understanding basic application architecture, object-oriented
-                                programming, form handling, and data persistence. Domain logic is separated into classes
-                                and utility functions, with CSV used as a lightweight storage layer.
-                            </p>
-
-                            <ul class="project-tech">
-                                <li>PHP</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>CSV Storage</li>
-                                <li>Object-Oriented Programming (Book model)</li>
-                                <li>Form handling (add / delete)</li>
-                            </ul>
-
-                            <div class="project-links">
-                                <a href="https://github.com/macieserafin/PHP-Library" target="_blank" class="project-link github">
-                                    GitHub
-                                </a>
-                                <a href="http://library.macieserafin.pl" target="_blank" class="project-link live">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+            </div>
         </section>
-        
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you would like to get in touch, please send an email to <a href="mailto:macieserafin@gmail.com">macieserafin@gmail.com</a>.</p>
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-card">
+                    <h2>Contact</h2>
+                    <p>If you would like to get in touch, send me an email and I will respond as soon as possible.</p>
+                    <a href="mailto:macieserafin@gmail.com">macieserafin@gmail.com</a>
+                </div>
+            </div>
         </section>
-        
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>&copy; <span id="year"></span> Maciej Serafin. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
