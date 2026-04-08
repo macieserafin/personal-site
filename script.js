@@ -1,10 +1,38 @@
-function toggleMenu() {
-    var menu = document.getElementById("nav-list");
-    menu.classList.toggle("show");}
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = document.getElementById('site-nav');
+const navLinks = document.querySelectorAll('.nav-list a');
 
-//footer
-document.getElementById("year").textContent = new Date().getFullYear();
+function closeMenu() {
+    if (!menuToggle || !siteNav) {
+        return;
+    }
 
-document.querySelector('.certificate-img').addEventListener('click', function() {
-  this.classList.toggle('active');
-});
+    siteNav.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+}
+
+if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 860) {
+                closeMenu();
+            }
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 860) {
+            closeMenu();
+        }
+    });
+}
+
+const yearElement = document.getElementById('year');
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
