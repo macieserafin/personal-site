@@ -1,45 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Maciej Serafin - computer science student.">
+    <meta name="description" content="Maciej Serafin - Java, Spring Boot, REST APIs, PostgreSQL and Docker. Software projects, technical skills and professional background." data-i18n-pl-content="Maciej Serafin - Java, Spring Boot, REST API, PostgreSQL i Docker. Projekty programistyczne, umiejętności techniczne i doświadczenie zawodowe.">
     <title>Maciej Serafin</title>
+    <script>
+        (() => {
+            let theme;
+            try { theme = localStorage.getItem('portfolio-theme'); } catch {}
+            document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+                ? theme
+                : 'dark';
+        })();
+    </script>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9XFK9G1ZJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'G-K9XFK9G1ZJ');
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
     <header class="site-header">
         <div class="container nav-bar">
             <a href="#welcome" class="brand">Maciej Serafin</a>
 
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-                Menu
-            </button>
-
-            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation" data-i18n-pl-aria-label="Nawigacja główna">
                 <ul class="nav-list">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Background</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <!-- <li><a href="#certificates">Certificates</a></li> -->
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" data-i18n-pl="O mnie">About</a></li>
+                    <li><a href="#education" data-i18n-pl="Edukacja i praca">Background</a></li>
+                    <li><a href="#skills" data-i18n-pl="Umiejętności">Skills</a></li>
+
+                    <li><a href="#projects" data-i18n-pl="Projekty">Projects</a></li>
+                    <li><a href="#contact" data-i18n-pl="Kontakt">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="header-controls">
+                <div class="language-switch segmented-switch" role="group" aria-label="Choose language" data-i18n-pl-aria-label="Wybierz język" data-language="en" hidden>
+                    <span class="segmented-switch__indicator" aria-hidden="true"></span>
+                    <button type="button" data-language="pl" lang="pl" aria-label="Polski" aria-pressed="false">PL</button>
+                    <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+                </div>
+                <div class="theme-switch segmented-switch" role="group" aria-label="Choose theme" data-i18n-pl-aria-label="Wybierz motyw" data-theme="dark" hidden>
+                    <span class="segmented-switch__indicator" aria-hidden="true"></span>
+                    <button type="button" data-theme="light" aria-label="Light theme" data-i18n-pl-aria-label="Jasny motyw" aria-pressed="false">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg>
+                    </button>
+                    <button type="button" data-theme="dark" aria-label="Dark theme" data-i18n-pl-aria-label="Ciemny motyw" aria-pressed="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14A8.7 8.7 0 0 1 10 3.5 8.7 8.7 0 1 0 20.5 14Z"/></svg>
+                    </button>
+                </div>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+            </div>
         </div>
     </header>
 
@@ -47,434 +69,527 @@
         <section id="welcome" class="section hero">
             <div class="container hero-layout">
                 <div class="hero-copy">
-                    <p class="eyebrow">Computer Science Student</p>
-                    <h1>Hi, I'm Maciej Serafin</h1>
-                    <p>
-                        I am a Computer Science student focused mainly on Java and backend development.
-                        I build practical software projects centered around REST APIs, databases, application structure, and problem solving through code.
-                    </p>
-
-                    <p>
-                        While backend is my main direction, I also enjoy working across the wider technical stack when needed, including web fundamentals, deployment, Linux environments, and infrastructure basics.
-                    </p>
-
+                    <p class="eyebrow" data-i18n-pl="Student informatyki na PJATK">Computer Science student at PJATK</p>
+                    <h1 data-i18n-pl="Cześć, jestem Maciej Serafin">Hi, I'm Maciej Serafin</h1>
+                    <p data-i18n-pl="Interesuję się technologią i lubię uczyć się przez praktykę. Tworzę własne projekty, sprawdzam nowe narzędzia i szukam sposobów na usprawnienie swojej pracy.">I'm interested in technology and like learning by doing. I build my own projects, try new tools and look for ways to make my work easier.</p>
+                    <p data-i18n-pl="Studiuję informatykę na PJATK i jednocześnie pracuję. Szukam pierwszej pracy w IT, w której wykorzystam to, co już umiem, i będę mógł uczyć się od bardziej doświadczonych osób.">I study Computer Science at PJATK while working. I'm looking for my first role in IT where I can use what I already know and learn from more experienced colleagues.</p>
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="https://github.com/macieserafin" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub Profile</a>
+                        <a href="#skills" class="btn btn-primary" data-i18n-pl="Moje umiejętności">My skills</a>
+                        <a href="#projects" class="btn btn-ghost" data-i18n-pl="Zobacz projekty">View projects</a>
                     </div>
-
-                    <ul class="hero-metrics" aria-label="Quick profile highlights">
-                        <li>
-                            <strong>Java</strong>
-                            <span>Backend-oriented projects built around APIs, data, and application logic</span>
-                        </li>
-                        <li>
-                            <strong>Work + Studies</strong>
-                            <span>Developing technical skills while balancing university and professional responsibilities</span>
-                        </li>
-                        <li>
-                            <strong>Hands-On</strong>
-                            <span>Building projects, deploying apps, and learning outside classes</span>
-                        </li>
-                    </ul>
                 </div>
-
-                <aside class="hero-card" aria-label="Current focus">
-                    <h2>Current Focus</h2>
-                    <p class="hero-card-intro">
-                        Technologies and topics I am actively working on right now.
-                    </p>
+                <aside class="hero-card" aria-labelledby="technical-scope-title">
+                    <h2 data-i18n-pl="Co wnoszę do zespołu" id="technical-scope-title">What I bring to a team</h2>
                     <ul class="focus-list">
-
                         <li>
-                            <strong>Networking Fundamentals</strong>
-                            <span>Completing Cisco networking coursework and practicing labs focused on routing, switching, and core network concepts.</span>
+                            <strong data-i18n-pl="Inicjatywa i ciekawość">Initiative and curiosity</strong>
+                            <span data-i18n-pl="Rozwijam własne projekty i chętnie poznaję nowe narzędzia. Gdy czegoś nie wiem, szukam informacji i sprawdzam je w praktyce.">I build my own projects and enjoy trying new tools. When I don't know something, I look it up and try it out.</span>
                         </li>
                         <li>
-                            <strong>Spring Security</strong>
-                            <span>Practicing authentication, authorization, and role-based access control in Java backend projects.</span>
+                            <strong data-i18n-pl="Praktyczne podejście">A practical approach</strong>
+                            <span data-i18n-pl="Wykorzystuję wiedzę ze studiów we własnych projektach. Lubię znaleźć przyczynę problemu i sprawdzić, czy moje rozwiązanie działa.">I use what I learn at university in my own projects. I like finding the cause of a problem and checking whether my solution works.</span>
                         </li>
                         <li>
-                            <strong>React</strong>
-                            <span>Starting to learn React to build more interactive frontend experiences.</span>
+                            <strong data-i18n-pl="Współpraca i odpowiedzialność">Collaboration and responsibility</strong>
+                            <span data-i18n-pl="W pracy organizuję zadania zespołu. Dbam o to, żeby każdy wiedział, co ma zrobić, a dane w systemie były poprawne.">At work, I organise the team's tasks. I make sure people know what they need to do and that the data in the system is accurate.</span>
                         </li>
-
                     </ul>
                 </aside>
             </div>
         </section>
-
         <section id="about" class="section">
             <div class="container about-layout">
                 <div class="profile-card">
-                    <img src="your-photo.jpg" alt="Portrait of Maciej Serafin" class="profile-photo">
+                    <img src="your-photo.jpg" alt="Portrait of Maciej Serafin" data-i18n-pl-alt="Zdjęcie Macieja Serafina" class="profile-photo">
                     <div class="profile-links">
                         <a href="https://github.com/macieserafin" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="#contact">Email</a>
+                        <a href="#contact" data-i18n-pl="E-mail">Email</a>
                     </div>
                 </div>
-
                 <div class="about-copy">
                     <header class="section-head section-head-left">
-                        <h2>About Me</h2>
-                        <p>Student, self-learner, and builder of small to medium software projects.</p>
+                        <h2 data-i18n-pl="O mnie">About me</h2>
+                        <p data-i18n-pl="Studiuję, pracuję i rozwijam własne projekty. Każde z tych zajęć uczy mnie czegoś innego.">I study, work and build my own projects. Each teaches me something different.</p>
                     </header>
-
-                <p>
-                    I am a <strong>Computer Science student</strong> with a strong interest in <strong>Java</strong>, <strong>backend development</strong>, and understanding how <strong>software works beyond the surface level</strong>.
-                    Most of the projects I build are centered around <strong>APIs</strong>, <strong>databases</strong>, <strong>application logic</strong>, and <strong>clean project structure</strong>.
-                </p>
-
-                <p>
-                    Alongside my studies, I work in a <strong>cash processing environment</strong> where I also take on <strong>supervisory responsibilities</strong>.
-                    Balancing <strong>work and university</strong> has taught me <strong>consistency</strong>, <strong>accountability</strong>, and how to keep improving under <strong>time constraints</strong>.
-                </p>
-
-                <p>
-                    My main technical direction is <strong>backend development</strong>, especially in <strong>Java</strong>, but I am not limited to one narrow area.
-                    I am also comfortable working with <strong>web basics</strong>, <strong>deployment tasks</strong>, <strong>Linux environments</strong>, and related <strong>technical concepts</strong> when a project requires it.
-                </p>
-
-                <p>
-                    I am looking to grow through <strong>practical experience</strong>, <strong>team collaboration</strong>, and projects that help me become a stronger <strong>software engineer</strong>.
-                </p>
+                    <p data-i18n-pl="Lubię wiedzieć, jak coś działa. We własnych projektach mogę próbować różnych podejść i uczyć się na błędach. Dużo robię samodzielnie, ale chętnie rozmawiam o rozwiązaniach i korzystam z doświadczenia innych.">I like knowing how things work. My own projects let me try different approaches and learn from mistakes. I do a lot independently, but I also enjoy discussing solutions and learning from other people's experience.</p>
+                    <p data-i18n-pl="Poza studiami pracuję przy organizacji zadań zespołu i wprowadzaniu danych. Ta praca nauczyła mnie pilnowania szczegółów, ustalania priorytetów i dogadywania się z ludźmi. Te umiejętności przydają mi się również przy projektach.">Alongside my studies, I organise team tasks and enter data at work. This has taught me to pay attention to details, set priorities and work with people. Those skills also help me with my projects.</p>
+                    <p data-i18n-pl="Chcę rozpocząć pracę w IT i dalej rozwijać swoje umiejętności w zespole. Po godzinach prowadzę serwery Minecraft i tworzę własne modpacki. To też okazja do eksperymentowania i rozwiązywania problemów.">I'd like to start working in IT and keep developing my skills as part of a team. In my spare time, I run Minecraft servers and put together custom modpacks. That gives me another way to experiment and solve problems.</p>
                 </div>
             </div>
         </section>
-
         <section id="education" class="section">
             <div class="container">
                 <header class="section-head">
-                    <h2>Background</h2>
-                    <p>Education and work milestones that shape my technical and professional development.</p>
+                    <h2 data-i18n-pl="Edukacja i praca">Background</h2>
+                    <p data-i18n-pl="Studia informatyczne, wykształcenie techniczne i doświadczenie w organizacji pracy zespołu.">Computer Science studies, technical education and experience coordinating a team's work.</p>
                 </header>
-
                 <div class="timeline">
                     <article class="timeline-item">
                         <div class="timeline-content">
-                            <h3>Technikum - TEB Edukacja, Gdynia</h3>
-                            <p>Graduated as an IT specialist with a focus on Microsoft cloud technologies.</p>
+                            <h3 data-i18n-pl="Technikum - TEB Edukacja, Gdynia">Technikum - TEB Edukacja, Gdynia</h3>
+                            <p data-i18n-pl="Ukończyłem technikum informatyczne ze specjalizacją w technologiach chmurowych Microsoft.">Graduated as an IT specialist with a focus on Microsoft cloud technologies.</p>
                         </div>
                         <span class="timeline-date">2019 - 2024</span>
                     </article>
-
                     <article class="timeline-item">
                         <div class="timeline-content">
-                            <h3>Cash Sorting Facility</h3>
-                            <p>Started in 2021 and took on ATM cash sorting supervisory responsibilities in 2024, combining operational work with team and process oversight.</p>
+                            <h3 data-i18n-pl="Regionalne Centrum Gotówki - Solid MCG Sp. z o.o.">Cash Sorting Facility - Solid MCG Sp. z o.o.</h3>
+                            <p data-i18n-pl="Od 2024 roku pełnię obowiązki kierownicze: rozdzielam zadania, wprowadzam dane do systemu i organizuję pracę zespołu.">Since 2024, I have had supervisory duties: assigning tasks, entering data into the system and organising the team's work.</p>
                         </div>
-                        <span class="timeline-date">2021 - Present</span>
+                        <span class="timeline-date" data-i18n-pl="2021 - obecnie">2021 - Present</span>
                     </article>
-
                     <article class="timeline-item">
                         <div class="timeline-content">
-                            <h3>PJATK, Gdansk</h3>
-                            <p>Currently studying Computer Science at the Polish-Japanese Academy of Information Technology.</p>
+                            <h3 data-i18n-pl="PJATK, Gdańsk">PJATK, Gdansk</h3>
+                            <p data-i18n-pl="Studiuję informatykę w Polsko-Japońskiej Akademii Technik Komputerowych.">Currently studying Computer Science at the Polish-Japanese Academy of Information Technology.</p>
                         </div>
-                        <span class="timeline-date">2024 - Present</span>
+                        <span class="timeline-date" data-i18n-pl="2024 - obecnie">2024 - Present</span>
                     </article>
                 </div>
             </div>
         </section>
-
         <section id="skills" class="section">
             <div class="container">
                 <header class="section-head">
-                    <h2>Skills</h2>
-                    <p>Core technologies and tools I use while building backend and web projects.</p>
+                    <h2 data-i18n-pl="Umiejętności">Skills</h2>
+                    <p data-i18n-pl="Czego nauczyłem się w projektach, na studiach i w pracy.">What I've learned through projects, university and work.</p>
                 </header>
 
+                <div class="skills-summary">
+                    <dl class="skills-summary-list"
+                        aria-label="Skills at a glance"
+                        data-i18n-pl-aria-label="Umiejętności w skrócie">
+
+                        <div>
+                            <dt data-i18n-pl="Programowanie">Programming</dt>
+                            <dd>Java, Spring Boot, Spring Security, REST API, JavaScript, React, TypeScript, HTML/CSS, PHP</dd>
+                        </div>
+
+                        <div>
+                            <dt data-i18n-pl="Dane i testy">Data and testing</dt>
+                            <dd>SQL, PostgreSQL, MariaDB, JPA/Hibernate, JUnit, Mockito, MockMvc</dd>
+                        </div>
+
+                        <div>
+                            <dt data-i18n-pl="DevOps i CI/CD">DevOps &amp; CI/CD</dt>
+                            <dd>Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD</dd>
+                        </div>
+
+                        <div>
+                            <dt data-i18n-pl="Narzędzia">Tools</dt>
+                            <dd>Git/GitHub, Maven/Gradle, Postman, Swagger/OpenAPI, IntelliJ IDEA</dd>
+                        </div>
+
+                        <div>
+                            <dt data-i18n-pl="Informatyka">Computer Science</dt>
+                            <dd data-i18n-pl="OOP, algorytmy i struktury danych, mikroserwisy, sieci komputerowe, C#, C++, asembler">
+                                OOP, algorithms and data structures, microservices, computer networks, C#, C++, assembly
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt data-i18n-pl="Współpraca">Collaboration</dt>
+                            <dd data-i18n-pl="Organizacja pracy zespołu, komunikacja, priorytetyzacja, Scrum">
+                                Team coordination, communication, prioritisation, Scrum
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt data-i18n-pl="AI i sposób pracy">AI and workflow</dt>
+                            <dd class="skills-summary-with-link">
+                                <span data-i18n-pl="Claude, Codex, agenci AI, samodzielna analiza problemów i informacji">Claude, Codex, AI agents, independent problem solving and research</span>
+                                <a href="#projects" class="btn btn-primary skills-summary-link">
+                                    <span data-i18n-pl="Zobacz projekty">View projects</span>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                                </a>
+                            </dd>
+                        </div>
+
+                    </dl>
+                </div>
+
                 <div class="skills-grid">
-                    <article class="skill-card skill-card--wide">
-                        <h3>Java Backend</h3>
-                        <p class="skill-card__lead">Core stack I use to build Java backend applications.</p>
-                        <ul class="skill-tags">
-                            <li>Java</li>
-                            <li>OOP</li>
-                            <li>Spring Boot</li>
-                            <li>REST API Design</li>
-                            <li>JPA / Hibernate</li>
-                            <li>Spring Data JPA</li>
-                            <li>Spring Security</li>
-                            <li>Maven</li>
-                            <li>Gradle</li>
-                        </ul>
-                    </article>
-
-                    <article class="skill-card skill-card--wide">
-                        <h3>Backend Architecture</h3>
-                        <p class="skill-card__lead">Patterns and practices used across my backend projects.</p>
-                        <ul class="skill-tags">
-                            <li>Layered Architecture</li>
-                            <li>DTO Mapping</li>
-                            <li>Bean Validation</li>
-                            <li>Global Exception Handling</li>
-                            <li>Spring Security</li>
-                            <li>Scheduled Tasks</li>
-                            <li>Caching (Caffeine)</li>
-                            <li>Multi-module</li>
-                        </ul>
-                    </article>
-
                     <article class="skill-card">
-                        <h3>Data and Integration</h3>
-                        <p class="skill-card__lead">Database work, API data flow, and config-driven setup.</p>
+                        <h3 data-i18n-pl="Java i Spring">Java and Spring</h3>
+                        <p data-i18n-pl="W Javie mam najwięcej doświadczenia projektowego. Tworzę API i logikę aplikacji, łączę je z bazą danych oraz obsługuję logowanie i uprawnienia użytkowników." class="skill-card__lead">Java is where I have the most project experience. I build APIs and application logic, connect them to databases and handle login and user permissions.</p>
                         <ul class="skill-tags">
-                            <li>SQL</li>
-                            <li>PostgreSQL</li>
-                            <li>MariaDB</li>
-                            <li>Schema Design</li>
-                            <li>Relational Data Modeling</li>
-                            <li>API Integration</li>
-                            <li>JSON Processing</li>
-                            <li>Externalized Configuration</li>
+                            <li> Java 17 / 21 </li>
+                            <li> OOP </li>
+                            <li> Spring Boot </li>
+                            <li> REST API </li>
+                            <li> Spring Security </li>
+                            <li> Spring Data JPA </li>
+                            <li> JPA / Hibernate </li>
                         </ul>
                     </article>
-
                     <article class="skill-card">
-                        <h3>Tooling and Quality</h3>
-                        <p class="skill-card__lead">Tools I use for development workflow, testing, and API work.</p>
+                        <h3 data-i18n-pl="Interfejsy internetowe">Web interfaces</h3>
+                        <p data-i18n-pl="Tworzę responsywne strony i interfejsy połączone z API. Pracuję z formularzami i sesjami użytkownika, korzystam z JavaScript, Reacta i PHP." class="skill-card__lead">I build responsive pages and interfaces connected to APIs. I work with forms and user sessions using JavaScript, React and PHP.</p>
                         <ul class="skill-tags">
-                            <li>Git</li>
-                            <li>GitHub</li>
-                            <li>Docker</li>
-                            <li>IntelliJ IDEA</li>
-                            <li>Swagger / OpenAPI</li>
-                            <li>Postman</li>
-                            <!-- <li>JUnit</li> -->
-                            <li>CLI Productivity</li>
+                            <li> HTML5 / CSS3 </li>
+                            <li> JavaScript </li>
+                            <li> React / TypeScript </li>
+                            <li> Vite </li>
+                            <li> PHP </li>
+                            <li data-i18n-pl="Podstawy HTTP"> HTTP basics </li>
+                            <li data-i18n-pl="Responsywne interfejsy"> Responsive interfaces </li>
                         </ul>
                     </article>
-
                     <article class="skill-card">
-                        <h3>Web and Deployment</h3>
-                        <p class="skill-card__lead">Frontend basics and deployment environment I work with.</p>
+                        <h3 data-i18n-pl="Dane i integracje">Data and integrations</h3>
+                        <p data-i18n-pl="Projektuję tabele i relacje, pracuję z SQL i transakcjami. Łączę aplikacje z zewnętrznymi API, przetwarzam JSON i oddzielam konfigurację od kodu." class="skill-card__lead">I design tables and relationships and work with SQL and transactions. I connect applications to external APIs, process JSON and keep configuration separate from code.</p>
                         <ul class="skill-tags">
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>PHP</li>
-                            <li>HTTP Basics</li>
-                            <li>Linux (daily use)</li>
-                            <li>Bash</li>
-                            <li>VPS Management</li>
-                            <li>Nginx</li>
-                            <li>App Deployment</li>
+                            <li> SQL </li>
+                            <li> PostgreSQL </li>
+                            <li> MariaDB </li>
+                            <li data-i18n-pl="Projektowanie schematów"> Schema design </li>
+                            <li data-i18n-pl="Modelowanie relacyjne"> Relational data modelling </li>
+                            <li data-i18n-pl="Transakcje / CRUD"> Transactions / CRUD </li>
+                            <li data-i18n-pl="Integracja z API"> API integration </li>
+                            <li> JSON </li>
+                            <li data-i18n-pl="Konfiguracja zewnętrzna"> Externalised configuration </li>
                         </ul>
                     </article>
-
-                    <article class="skill-card skill-card--full">
-                        <h3>Additional Exposure</h3>
-                        <p class="skill-card__lead">Related technical areas and practical experience outside core backend.</p>
+                    <article class="skill-card">
+                        <h3 data-i18n-pl="Narzędzia i środowisko pracy">Tools and environments</h3>
+                        <p data-i18n-pl="Pracuję z Linuksem, Dockerem i narzędziami do budowania projektów. Konfiguruję środowiska aplikacji i serwery, analizuję logi i rozwiązuję problemy z uruchamianiem. Lubię rozumieć, jak kod działa w praktyce." class="skill-card__lead">I work with Linux, Docker and project build tools. I configure application environments and servers, analyse logs and troubleshoot issues when running applications. I like understanding how code works in practice.</p>
                         <ul class="skill-tags">
-                            <li>Computer Networks Basics</li>
-                            <li>Client-Server Architecture</li>
-                            <li>C#</li>
-                            <li>C++</li>
-                            <li>Assembly basics</li>
-                            <li>Minecraft Server Hosting</li>
-                            <li>Modpack Optimization</li>
-                            <li>Open-Source Mod Tweaks</li>
-                            <li>Performance Tuning</li>
+                            <li> Linux </li>
+                            <li> Docker / Compose </li>
+                            <li> Maven / Gradle </li>
+                            <li> Git / GitHub </li>
+                            <li> GitHub Actions </li>
+                            <li> Caddy / Nginx </li>
+                            <li> IntelliJ IDEA </li>
+                            <li> Swagger / OpenAPI </li>
+                            <li> Postman </li>
+                            <li> Bash / CLI </li>
+                            <li data-i18n-pl="Administracja VPS"> VPS management </li>
+                            <li data-i18n-pl="Wdrażanie aplikacji"> App deployment </li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n-pl="Testowanie">Testing</h3>
+                        <p data-i18n-pl="Piszę testy logiki aplikacji, endpointów i operacji na bazie danych. W Helpdesku sprawdzam m.in. logowanie, uprawnienia i pełny przebieg obsługi zgłoszenia." class="skill-card__lead">I write tests for application logic, endpoints and database operations. In Helpdesk, I test login, permissions and the complete ticket workflow.</p>
+                        <ul class="skill-tags">
+                            <li> JUnit 5 </li>
+                            <li> Mockito </li>
+                            <li> MockMvc </li>
+                            <li data-i18n-pl="Testy jednostkowe"> Unit tests </li>
+                            <li data-i18n-pl="Testy integracyjne"> Integration tests </li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n-pl="Inne obszary techniczne">Other technical areas</h3>
+                        <p data-i18n-pl="Znam algorytmy, struktury danych i założenia architektury mikroserwisowej. Mam też podstawy sieci komputerowych i architektury klient-serwer. Poznałem C#, C++ i podstawy asemblera." class="skill-card__lead">I understand algorithms, data structures and the principles of microservice architecture. I also have a grounding in computer networks and client-server architecture, and have worked with C#, C++ and basic assembly.</p>
+                        <ul class="skill-tags">
+                            <li data-i18n-pl="Algorytmy"> Algorithms </li>
+                            <li data-i18n-pl="Struktury danych"> Data structures </li>
+                            <li data-i18n-pl="Mikroserwisy"> Microservices </li>
+                            <li data-i18n-pl="Podstawy sieci komputerowych"> Computer networks basics </li>
+                            <li data-i18n-pl="Architektura klient-serwer"> Client-server architecture </li>
+                            <li> C# </li>
+                            <li> C++ </li>
+                            <li data-i18n-pl="Asembler (podstawy)"> Assembly (basics) </li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n-pl="Analiza i rozwiązywanie problemów">Analysis and problem solving</h3>
+                        <p data-i18n-pl="Potrafię samodzielnie wyszukać i przeanalizować informacje, rozłożyć problem na mniejsze części i zaproponować rozwiązanie. Chętnie sięgam do dokumentacji i poznaję narzędzia potrzebne do danego zadania." class="skill-card__lead">I can independently find and analyse information, break a problem into smaller parts and propose a solution. I turn to documentation and learn the tools a task calls for.</p>
+                        <ul class="skill-tags">
+                            <li data-i18n-pl="Analiza informacji"> Information analysis </li>
+                            <li data-i18n-pl="Samodzielność"> Initiative </li>
+                            <li data-i18n-pl="Uczenie się"> Learning </li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n-pl="Współpraca i organizacja">Collaboration and organisation</h3>
+                        <p data-i18n-pl="Mam doświadczenie w organizacji pracy zespołu i podziale zadań. Cenię jasną komunikację i odpowiedzialność. Lubię różnorodne zadania i pracę przy kilku projektach równolegle, dbając o priorytety i porządek w pracy." class="skill-card__lead">I have experience organising a team's work and assigning tasks. I value clear communication and responsibility. I enjoy varied tasks and working on several projects at a time, keeping priorities clear and my work organised.</p>
+                        <ul class="skill-tags">
+                            <li data-i18n-pl="Praca zespołowa"> Teamwork </li>
+                            <li data-i18n-pl="Komunikacja"> Communication </li>
+                            <li data-i18n-pl="Priorytetyzacja"> Prioritisation </li>
+                            <li> Scrum </li>
+                            <li data-i18n-pl="Organizacja pracy"> Work organisation </li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <h3 data-i18n-pl="AI w codziennej pracy">AI in everyday work</h3>
+                        <p data-i18n-pl="Na co dzień korzystam z Claude'a, Codexa i innych agentów AI w pracy programistycznej. Potrafię jasno określić zadanie i poprowadzić pracę z agentem tak, by szybciej przechodzić od pomysłu do rozwiązania i zrobić więcej w krótszym czasie." class="skill-card__lead">I use Claude, Codex and other AI agents in my daily programming work. I can define tasks clearly and guide an agent's work to move from idea to solution faster and get more done in less time.</p>
+                        <ul class="skill-tags">
+                            <li> Claude </li>
+                            <li> Codex </li>
+                            <li data-i18n-pl="Praca z agentami AI"> Working with AI agents </li>
                         </ul>
                     </article>
                 </div>
             </div>
         </section>
-
-        <!-- <section id="certificates" class="section">
-            <div class="container">
-                <header class="section-head">
-                    <h2>Education & Certifications</h2>
-                    <p>Formal confirmation of completed IT education.</p>
-                </header>
-
-                <div class="certificate-layout">
-                    <a href="certificate1.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                        <img src="certificate1.jpg" alt="IT Technician Certificate" class="certificate-image">
-                    </a>
-                </div>
-            </div>
-        </section> -->
-
         <section id="projects" class="section">
             <div class="container">
                 <header class="section-head">
-                    <h2>Projects</h2>
-                    <p>Selected projects that reflect my practical learning and engineering approach.</p>
+                    <h2 data-i18n-pl="Projekty">Projects</h2>
+                    <p data-i18n-pl="Publiczne projekty: backend w Javie, interfejsy internetowe, aplikacje desktopowe i gry.">Public projects covering Java backend development, web interfaces, desktop applications, and games.</p>
                 </header>
-
                 <div class="project-groups">
                     <section class="project-group" aria-labelledby="java-projects-title">
                         <div class="project-group-head">
-                            <h3 id="java-projects-title">Java Projects</h3>
-                            <p>Backend and desktop projects focused on architecture, API design, and structured application logic.</p>
+                            <h3 id="java-projects-title" data-i18n-pl="Projekty w Javie">Java Projects</h3>
+                            <p data-i18n-pl="Projekty backendowe i desktopowe, w których pracuję nad API, strukturą kodu i logiką aplikacji.">Backend and desktop projects where I work on APIs, code structure and application logic.</p>
                         </div>
-
                         <div class="project-grid">
-                            <article class="project-card">
+                            <article class="project-card project-card--primary">
                                 <div class="project-title-row">
-                                    <h4>currency-monitor-api</h4>
-                                    <span class="project-badge">Java / Backend System</span>
+                                    <h4>Helpdesk</h4>
+                                    <span class="project-badge" data-i18n-pl="Java / Aplikacja full stack">Java / Full-Stack Web App</span>
                                 </div>
-                                <p>
-                                    Modular Java application that fetches, validates, and stores exchange rates from the NBP API.
-                                    It separates business logic, API integration, persistence, and runtime concerns,
-                                    then exposes data through a REST API.
-                                </p>
-                                <ul class="tag-list">
-                                    <li>Java 17</li>
-                                    <li>Spring Boot</li>
-                                    <li>Multi-module Maven</li>
-                                    <li>REST API</li>
-                                    <li>PostgreSQL</li>
-                                    <li>JPA / Hibernate</li>
-                                    <li>Docker</li>
-                                    <li>Scheduler</li>
-                                    <li>Caffeine Cache</li>
+                                <p data-i18n-pl="Samodzielnie zaprojektowana i zbudowana aplikacja do obsługi zgłoszeń serwisowych. Backend Spring Boot, frontend JavaScript i baza PostgreSQL.">A support ticket application I designed and built independently, with a Spring Boot backend, JavaScript frontend and PostgreSQL database.</p>
+                                <ul class="project-features">
+                                    <li data-i18n-pl="Logowanie sesyjne, role użytkownika, agenta i administratora oraz panele dostosowane do uprawnień."> Session authentication, user, agent and administrator roles, and role-specific dashboards. </li>
+                                    <li data-i18n-pl="Przypisywanie zgłoszeń, statusy, priorytety, komentarze, załączniki i historia zmian."> Ticket assignment, statuses, priorities, comments, attachments and change history. </li>
+                                    <li data-i18n-pl="Testy integracyjne, dokumentacja API oraz konfiguracja Docker Compose i Caddy do wdrożenia na VPS."> Integration tests, API documentation and Docker Compose and Caddy configuration for VPS deployment. </li>
                                 </ul>
-                                <div class="project-links">
-                                    <a href="https://github.com/macieserafin/currency-monitor-api" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <ul class="tag-list">
+                                    <li> Java 17 </li>
+                                    <li> Spring Boot 4 </li>
+                                    <li> Spring Security </li>
+                                    <li> Spring Data JPA </li>
+                                    <li> PostgreSQL </li>
+                                    <li> JavaScript </li>
+                                    <li> Vite </li>
+                                    <li> Docker Compose </li>
+                                </ul>
+                                <div class="project-links two-links">
+                                    <a href="https://github.com/macieserafin/helpdesk" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <a href="https://helpdesk.macieserafin.pl" target="_blank" rel="noopener noreferrer" data-i18n-pl="Otwórz aplikację" aria-label="Open Helpdesk" data-i18n-pl-aria-label="Otwórz Helpdesk">Open app</a>
                                 </div>
                             </article>
-
+                            <article class="project-card project-card--primary">
+                                <div class="project-title-row">
+                                    <h4>Currency Monitor</h4>
+                                    <span class="project-badge" data-i18n-pl="Java / Aplikacja full stack">Java / Full-Stack Web App</span>
+                                </div>
+                                <p data-i18n-pl="Aplikacja do pobierania i przechowywania kursów walut z API NBP. Backend w Javie i Spring Boot oraz interfejs React i TypeScript.">An application for fetching and storing exchange rates from the NBP API. A Java and Spring Boot backend with a React and TypeScript interface.</p>
+                                <ul class="project-features">
+                                    <li data-i18n-pl="Automatyczne pobieranie kursów, zapis historii w PostgreSQL i wykrywanie powtórzonych danych."> Scheduled rate retrieval, historical data in PostgreSQL and duplicate detection. </li>
+                                    <li data-i18n-pl="REST API udostępniające waluty i kursy, z cache Caffeine."> REST endpoints for currencies and exchange rates, with Caffeine caching. </li>
+                                    <li data-i18n-pl="Wielomodułowy Maven: logika aplikacji, klient NBP, zapis danych i warstwa API. Testy jednostkowe i integracyjne."> A multi-module Maven project separating application logic, the NBP client, persistence and API, with unit and integration tests. </li>
+                                </ul>
+                                <ul class="tag-list">
+                                    <li> Java 17 </li>
+                                    <li> Spring Boot </li>
+                                    <li data-i18n-pl="Wielomodułowy Maven"> Multi-module Maven </li>
+                                    <li> REST API </li>
+                                    <li> PostgreSQL </li>
+                                    <li> JPA / Hibernate </li>
+                                    <li> Docker </li>
+                                    <li data-i18n-pl="Zadania cykliczne"> Scheduler </li>
+                                    <li data-i18n-pl="Pamięć podręczna Caffeine"> Caffeine Cache </li>
+                                    <li> React </li>
+                                    <li> TypeScript </li>
+                                </ul>
+                                <div class="project-links two-links">
+                                    <a href="https://github.com/macieserafin/currency-monitor-api" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <a href="https://currency.macieserafin.pl" target="_blank" rel="noopener noreferrer" data-i18n-pl="Otwórz aplikację" aria-label="Open Currency Monitor" data-i18n-pl-aria-label="Otwórz Currency Monitor">Open app</a>
+                                </div>
+                            </article>
                             <article class="project-card">
                                 <div class="project-title-row">
-                                    <h4>library-management-api</h4>
+                                    <h4>Library Management API</h4>
                                     <span class="project-badge">Java / Spring Boot REST API</span>
                                 </div>
-                                <p>
-                                    Library management backend with layered architecture and REST endpoints
-                                    for books, users, libraries, and borrow operations.
-                                    Includes DTOs, filtering logic, exception handling, and database persistence.
-                                </p>
+                                <p data-i18n-pl="Backend REST do zarządzania książkami, użytkownikami, bibliotekami, wypożyczeniami i zwrotami. Obejmuje filtrowanie książek, sprawdzanie ich dostępności przed wypożyczeniem, zapis danych w PostgreSQL, obsługę wyjątków i dokumentację OpenAPI."> REST backend for managing books, users, libraries, loans, and returns. Includes book filtering, checks against lending an already borrowed book, PostgreSQL persistence, exception handling, and OpenAPI documentation. </p>
                                 <ul class="tag-list">
-                                    <li>Java 21</li>
-                                    <li>Spring Boot</li>
-                                    <li>REST API</li>
-                                    <li>Spring Data JPA</li>
-                                    <li>PostgreSQL</li>
-                                    <li>OpenAPI</li>
+                                    <li> Java 21 </li>
+                                    <li> Spring Boot </li>
+                                    <li> REST API </li>
+                                    <li> Spring Data JPA </li>
+                                    <li> PostgreSQL </li>
+                                    <li> OpenAPI </li>
                                 </ul>
                                 <div class="project-links">
                                     <a href="https://github.com/macieserafin/library-management-api" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </article>
-
                             <article class="project-card">
                                 <div class="project-title-row">
-                                    <h4>task-manager-api</h4>
-                                    <span class="project-badge">Java / Spring Boot Web App</span>
+                                    <h4>Task Manager API</h4>
+                                    <span class="project-badge" data-i18n-pl="Java / Aplikacja Spring Boot">Java / Spring Boot Web App</span>
                                 </div>
-                                <p>
-                                    Spring Boot task manager with authentication and role-based access using Spring Security.
-                                    The project includes user and task modules, JPA persistence, Thymeleaf login view,
-                                    and secured endpoints for task and user management.
-                                </p>
+                                <p data-i18n-pl="API zadań z rejestracją, stroną logowania Thymeleaf i uwierzytelnianiem Spring Security. Użytkownicy mogą przeglądać, tworzyć i usuwać własne zadania. Zarządzanie użytkownikami i dokumentacja OpenAPI wymagają roli administratora. Projekt wykorzystuje walidację DTO, ochronę CSRF, JPA i H2."> Task management API with registration, a Thymeleaf login page, and Spring Security authentication. Users can list, create, and delete their own tasks; user management and OpenAPI documentation require the admin role. Uses DTO validation, CSRF protection, JPA, and H2. </p>
                                 <ul class="tag-list">
-                                    <li>Java 21</li>
-                                    <li>Spring Boot</li>
-                                    <li>Spring Security</li>
-                                    <li>Spring Data JPA</li>
-                                    <li>Thymeleaf</li>
-                                    <li>H2 Database</li>
+                                    <li> Java 21 </li>
+                                    <li> Spring Boot </li>
+                                    <li> Spring Security </li>
+                                    <li> Spring Data JPA </li>
+                                    <li> Thymeleaf </li>
+                                    <li data-i18n-pl="Baza danych H2"> H2 Database </li>
+                                    <li> OpenAPI </li>
                                 </ul>
                                 <div class="project-links">
                                     <a href="https://github.com/macieserafin/task-manager-api" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </article>
-
                             <article class="project-card">
                                 <div class="project-title-row">
-                                    <h4>task-manager-swing-app</h4>
-                                    <span class="project-badge">Java / Swing Desktop App</span>
+                                    <h4>Task Manager / Swing</h4>
+                                    <span class="project-badge" data-i18n-pl="Java / Aplikacja desktopowa Swing">Java / Swing Desktop App</span>
                                 </div>
-                                <p>
-                                    Java Swing desktop application for task management built to practice GUI structure,
-                                    user input handling, and clean separation between view and task model logic.
-                                </p>
+                                <p data-i18n-pl="Aplikacja desktopowa do zarządzania zadaniami z nazwą, opisem i priorytetem. Interfejs Swing, walidacja danych oraz oddzielny model i menedżer zadań.">A desktop application for managing tasks with a name, description and priority. A Swing interface, input validation and a separate task model and manager.</p>
                                 <ul class="tag-list">
-                                    <li>Java 17</li>
-                                    <li>Java Swing</li>
-                                    <li>Maven</li>
-                                    <li>Desktop GUI</li>
+                                    <li> Java 17 </li>
+                                    <li> Java Swing </li>
+                                    <li> Maven </li>
+                                    <li data-i18n-pl="Interfejs desktopowy"> Desktop GUI </li>
                                 </ul>
                                 <div class="project-links">
                                     <a href="https://github.com/macieserafin/task-manager-swing-app" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </article>
-
-                            
                         </div>
                     </section>
-
+                    <section class="project-group" aria-labelledby="web-projects-title">
+                        <div class="project-group-head">
+                            <h3 id="web-projects-title" data-i18n-pl="Interfejsy internetowe">Web Interfaces</h3>
+                            <p data-i18n-pl="Interfejsy przeglądarkowe w HTML, CSS i JavaScript.">Browser-based interfaces built with HTML, CSS, and JavaScript.</p>
+                        </div>
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Library Management / Frontend</h4>
+                                    <span class="project-badge" data-i18n-pl="JavaScript / Interfejs testowy API">JavaScript / API Test Interface</span>
+                                </div>
+                                <p data-i18n-pl="Interfejs w czystym JavaScript do ręcznego testowania Library Management API. Umożliwia zarządzanie książkami, użytkownikami i bibliotekami, filtrowanie książek, rejestrowanie wypożyczeń i zwrotów oraz ustawienie adresu backendu. Zawiera konfigurację Nginx i Dockera do serwowania plików statycznych."> Plain JavaScript interface for manually testing the Library Management API. Supports managing books, users, and libraries, filtering books, recording loans and returns, and configuring the backend URL. Includes Nginx and Docker setup for serving the static files. </p>
+                                <ul class="tag-list">
+                                    <li> HTML </li>
+                                    <li> CSS </li>
+                                    <li> JavaScript </li>
+                                    <li> Fetch API </li>
+                                    <li> Nginx </li>
+                                    <li> Docker </li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/library-management-frontend" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Personal Site</h4>
+                                    <span class="project-badge" data-i18n-pl="HTML / Strona portfolio">HTML / Portfolio Website</span>
+                                </div>
+                                <p data-i18n-pl="Ta strona portfolio jest zbudowana w HTML, CSS i czystym JavaScript. Ma responsywny układ, nawigację mobilną oraz sekcje wykształcenia i pracy, umiejętności, projektów i kontaktu. Proces GitHub Actions wdraża stronę na GitHub Pages."> This portfolio website is built with HTML, CSS and vanilla JavaScript. Includes responsive layouts, mobile navigation, and sections for background, skills, projects, and contact. A GitHub Actions workflow deploys the site to GitHub Pages. </p>
+                                <ul class="tag-list">
+                                    <li> HTML </li>
+                                    <li> CSS </li>
+                                    <li> JavaScript </li>
+                                    <li data-i18n-pl="Responsywny układ"> Responsive Design </li>
+                                    <li> GitHub Actions </li>
+                                    <li> GitHub Pages </li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/personal-site" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="project-group" aria-labelledby="php-projects-title">
+                        <div class="project-group-head">
+                            <h3 id="php-projects-title" data-i18n-pl="Projekty PHP">PHP Projects</h3>
+                            <p data-i18n-pl="Projekty internetowe do nauki obsługi żądań, uwierzytelniania i zapisu danych w plikach.">Web projects for practising request handling, authentication and storing data in files.</p>
+                        </div>
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Task Manager / PHP</h4>
+                                    <span class="project-badge" data-i18n-pl="PHP / Aplikacja internetowa">PHP / Web App</span>
+                                </div>
+                                <p data-i18n-pl="Menedżer zadań w PHP z logowaniem sesyjnym, panelem administratora i plikami CSV dla poszczególnych użytkowników. Obejmuje filtrowanie i sortowanie zadań, import i eksport CSV oraz kopie zapasowe plików przed zapisem zmian."> PHP task manager with session login, an admin panel, and per-user CSV storage. Includes task filtering and sorting, CSV task import and export, and file backups before saving changes. </p>
+                                <ul class="tag-list">
+                                    <li> PHP </li>
+                                    <li> HTML </li>
+                                    <li> CSS </li>
+                                    <li data-i18n-pl="Logowanie sesyjne"> Session Auth </li>
+                                    <li data-i18n-pl="Zapis danych w CSV"> CSV Storage </li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/php-task-manager" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Library / PHP</h4>
+                                    <span class="project-badge" data-i18n-pl="PHP / Aplikacja internetowa">PHP / Web App</span>
+                                </div>
+                                <p data-i18n-pl="Katalog książek w PHP do przeglądania, dodawania i usuwania pozycji. Wykorzystuje klasę Book z walidacją pól, obsługę formularzy i zapis danych w CSV."> PHP book catalog for listing, adding, and deleting books. Uses a Book class with field validation, form handling, and CSV storage for book records. </p>
+                                <ul class="tag-list">
+                                    <li> PHP </li>
+                                    <li> HTML </li>
+                                    <li> CSS </li>
+                                    <li data-i18n-pl="Zapis danych w CSV"> CSV Storage </li>
+                                    <li data-i18n-pl="Obiektowy model danych"> OOP Domain Model </li>
+                                    <li data-i18n-pl="Obsługa formularzy"> Form Handling </li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/php-library-csv" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
                     <section class="project-group" aria-labelledby="java-games-title">
                         <div class="project-group-head">
-                            <h3 id="java-games-title">Java Games</h3>
-                            <p>Game-focused projects exploring loops, rendering, interaction systems, and custom architecture.</p>
+                            <h3 id="java-games-title" data-i18n-pl="Gry w Javie">Java Games</h3>
+                            <p data-i18n-pl="Projekty gier: pętla gry, renderowanie, interakcje i własna struktura silnika.">Game projects with game loops, rendering, interactions and custom engine code.</p>
                         </div>
-
                         <div class="project-grid">
                             <article class="project-card">
                                 <div class="project-title-row">
                                     <h4>Sisyphus the Mushroom</h4>
-                                    <span class="project-badge">Java / 2D Desktop Game</span>
+                                    <span class="project-badge" data-i18n-pl="Java / Gra desktopowa 2D">Java / 2D Desktop Game</span>
                                 </div>
-                                <p>
-                                    Top-down game with custom loop, tile map, NPC interactions, collectibles,
-                                    ranged and melee combat, collision handling, audio, and a separate map editor.
-                                </p>
+                                <p data-i18n-pl="Gra z widokiem z góry, własną pętlą gry i mapą kafelkową. Obejmuje interakcje z NPC, zbieranie przedmiotów, walkę wręcz i na dystans, obsługę kolizji, dźwięk oraz oddzielny edytor map."> Top-down game with custom loop, tile map, NPC interactions, collectibles, ranged and melee combat, collision handling, audio, and a separate map editor. </p>
                                 <ul class="tag-list">
-                                    <li>Java</li>
-                                    <li>Java Swing</li>
-                                    <li>2D Tile Engine</li>
-                                    <li>Game Loop</li>
-                                    <li>Combat System</li>
-                                    <li>Map Editor</li>
+                                    <li> Java </li>
+                                    <li> Java Swing </li>
+                                    <li data-i18n-pl="Silnik kafelkowy 2D"> 2D Tile Engine </li>
+                                    <li data-i18n-pl="Pętla gry"> Game Loop </li>
+                                    <li data-i18n-pl="System walki"> Combat System </li>
+                                    <li data-i18n-pl="Edytor map"> Map Editor </li>
                                 </ul>
                                 <div class="project-links">
                                     <a href="https://github.com/macieserafin/sisyphus-the-mushroom-game" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </article>
-
                             <article class="project-card">
                                 <div class="project-title-row">
                                     <h4>TextNovelEngine</h4>
-                                    <span class="project-badge">Java / Narrative Engine Runtime</span>
+                                    <span class="project-badge" data-i18n-pl="Java / Silnik gier tekstowych">Java / Text Game Engine</span>
                                 </div>
-                                <p>
-                                    Runtime engine for text visual novels with hierarchical story structure,
-                                    dynamic story loading, branching choices, scene jumps, and a custom Swing reader UI.
-                                </p>
+                                <p data-i18n-pl="Silnik interaktywnych historii z interfejsem Swing, rozgałęzionymi wyborami i przejściami między scenami. Hierarchiczny model historii oraz wyszukiwanie, kompilowanie i wczytywanie zewnętrznych plików historii w Javie.">An interactive story engine with a Swing interface, branching choices and scene transitions. A hierarchical story model with discovery, compilation and loading of external Java story files.</p>
                                 <ul class="tag-list">
-                                    <li>Java</li>
-                                    <li>Swing UI</li>
-                                    <li>Gradle</li>
-                                    <li>Engine Architecture</li>
-                                    <li>State Management</li>
-                                    <li>Runtime Compilation</li>
+                                    <li> Java </li>
+                                    <li data-i18n-pl="Interfejs Swing"> Swing UI </li>
+                                    <li> Gradle </li>
+                                    <li data-i18n-pl="Architektura silnika"> Engine Architecture </li>
+                                    <li data-i18n-pl="Zarządzanie stanem"> State Management </li>
+                                    <li data-i18n-pl="Kompilacja podczas działania"> Runtime Compilation </li>
                                 </ul>
                                 <div class="project-links">
                                     <a href="https://github.com/macieserafin/text-novel-engine" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </article>
-
                             <article class="project-card">
                                 <div class="project-title-row">
                                     <h4>Flappy Bird</h4>
-                                    <span class="project-badge">Java / Swing Desktop Game</span>
+                                    <span class="project-badge" data-i18n-pl="Java / Gra desktopowa Swing">Java / Swing Desktop Game</span>
                                 </div>
-                                <p>
-                                    Desktop Flappy Bird implementation with custom loop, keyboard controls,
-                                    collision logic, scoring, restart flow, and integrated sound effects.
-                                </p>
+                                <p data-i18n-pl="Desktopowa wersja Flappy Bird z własną pętlą gry, sterowaniem klawiaturą, wykrywaniem kolizji, punktacją, ponownym rozpoczęciem rozgrywki i efektami dźwiękowymi."> A desktop version of Flappy Bird with a custom game loop, keyboard controls, collision detection, scoring, restarting and sound effects. </p>
                                 <ul class="tag-list">
-                                    <li>Java</li>
-                                    <li>Java Swing</li>
-                                    <li>Game Loop</li>
-                                    <li>Collision Detection</li>
-                                    <li>Keyboard Input</li>
-                                    <li>Audio Effects</li>
+                                    <li> Java 22 </li>
+                                    <li> Java Swing </li>
+                                    <li data-i18n-pl="Pętla gry"> Game Loop </li>
+                                    <li data-i18n-pl="Wykrywanie kolizji"> Collision Detection </li>
+                                    <li data-i18n-pl="Sterowanie klawiaturą"> Keyboard Input </li>
+                                    <li data-i18n-pl="Efekty dźwiękowe"> Audio Effects </li>
                                 </ul>
                                 <div class="project-links">
                                     <a href="https://github.com/macieserafin/flappy-bird-game" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -482,69 +597,14 @@
                             </article>
                         </div>
                     </section>
-
-                    <section class="project-group" aria-labelledby="php-projects-title">
-                        <div class="project-group-head">
-                            <h3 id="php-projects-title">PHP Projects</h3>
-                            <p>Web projects built to practice request flow, authentication, and lightweight persistence.</p>
-                        </div>
-
-                        <div class="project-grid">
-                            <article class="project-card">
-                                <div class="project-title-row">
-                                    <h4>PHP ToDoList</h4>
-                                    <span class="project-badge">PHP / Web App</span>
-                                </div>
-                                <p>
-                                    Pure PHP task management app created to understand full request-response flow,
-                                    session handling, role-based access, and CSV persistence with backup support.
-                                </p>
-                                <ul class="tag-list">
-                                    <li>PHP</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>Session Auth</li>
-                                    <li>CSV Storage</li>
-                                </ul>
-                                <div class="project-links two-links">
-                                    <a href="https://github.com/macieserafin/PHP-ToDoList" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    <a href="http://todolist.macieserafin.pl" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                </div>
-                            </article>
-
-                            <article class="project-card">
-                                <div class="project-title-row">
-                                    <h4>PHP Library</h4>
-                                    <span class="project-badge">PHP / Web App</span>
-                                </div>
-                                <p>
-                                    Simple book library app in pure PHP focused on object-oriented design,
-                                    form handling, and CSV-based data persistence.
-                                </p>
-                                <ul class="tag-list">
-                                    <li>PHP</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>CSV Storage</li>
-                                    <li>OOP Domain Model</li>
-                                    <li>Form Handling</li>
-                                </ul>
-                                <div class="project-links two-links">
-                                    <a href="https://github.com/macieserafin/PHP-Library" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    <a href="http://library.macieserafin.pl" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
                 </div>
             </div>
         </section>
-
         <section id="contact" class="section">
             <div class="container">
                 <div class="contact-card">
-                    <h2>Contact</h2>
-                    <p>If you would like to get in touch, send me an email and I will respond as soon as possible.</p>
+                    <h2 data-i18n-pl="Kontakt">Contact</h2>
+                    <p data-i18n-pl="Szukam praktyk lub pierwszej pracy w IT. Jeśli chcesz porozmawiać o moich projektach lub masz propozycję współpracy, napisz do mnie.">I'm looking for an internship or my first role in IT. If you'd like to talk about my projects or a job opportunity, feel free to email me.</p>
                     <a href="mailto:macieserafin@gmail.com">macieserafin@gmail.com</a>
                 </div>
             </div>
@@ -552,9 +612,9 @@
     </main>
 
     <footer class="site-footer">
-        <p>&copy; <span id="year"></span> Maciej Serafin. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Maciej Serafin. <span data-i18n-pl="Wszelkie prawa zastrzeżone.">All rights reserved.</span></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=7"></script>
 </body>
 </html>
