@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
     <header class="site-header">
@@ -148,6 +148,21 @@
                 </div>
             </div>
         </section>
+        <section id="certificates" class="section" aria-labelledby="certificates-title">
+            <div class="container">
+                <div class="certificates-panel">
+                    <h2 id="certificates-title" data-i18n-pl="Certyfikaty">Certificates</h2>
+                    <article class="certificate-entry" id="certificate-ccna">
+                        <div class="certificate-entry__details">
+                            <h3>CCNA: Introduction to Networks</h3>
+                            <p>Cisco Networking Academy · PJATK · <time datetime="2026-06-30" data-i18n-pl="30 czerwca 2026">30 June 2026</time></p>
+                            <p data-i18n-pl="Certyfikat ukończenia kursu">Certificate of course completion</p>
+                        </div>
+                        <a href="certificates/ccna-introduction-to-networks.pdf" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n-pl="Zobacz certyfikat (PDF)">View certificate (PDF)</a>
+                    </article>
+                </div>
+            </div>
+        </section>
         <section id="skills" class="section">
             <div class="container">
                 <header class="section-head">
@@ -162,7 +177,12 @@
 
                         <div>
                             <dt data-i18n-pl="Programowanie">Programming</dt>
-                            <dd>Java, Spring Boot, Spring Security, REST API, JavaScript, React, TypeScript, HTML/CSS, PHP</dd>
+                            <dd>Java, Spring Boot, Spring Security, REST API, JavaScript, React, TypeScript, HTML/CSS</dd>
+                        </div>
+
+                        <div>
+                            <dt data-i18n-pl="Podstawy">Basic Knowledge</dt>
+                            <dd data-i18n-pl="PHP, C#, C++, asembler">PHP, C#, C++, assembly</dd>
                         </div>
 
                         <div>
@@ -177,21 +197,26 @@
                         </div>
 
                         <div>
+                            <dt data-i18n-pl="Sieci komputerowe">Computer networks</dt>
+                            <dd data-i18n-pl="TCP/IP, IPv4/IPv6, podsieci, podstawy konfiguracji routerów i przełączników, diagnostyka sieci">TCP/IP, IPv4/IPv6, subnetting, basic router and switch configuration, network troubleshooting</dd>
+                        </div>
+
+                        <div>
                             <dt data-i18n-pl="Narzędzia">Tools</dt>
                             <dd>Git/GitHub, Maven/Gradle, Postman, Swagger/OpenAPI, IntelliJ IDEA</dd>
                         </div>
 
                         <div>
                             <dt data-i18n-pl="Informatyka">Computer Science</dt>
-                            <dd data-i18n-pl="OOP, algorytmy i struktury danych, mikroserwisy, sieci komputerowe, C#, C++, asembler">
-                                OOP, algorithms and data structures, microservices, computer networks, C#, C++, assembly
+                            <dd data-i18n-pl="OOP, algorytmy i struktury danych, podstawy architektury mikroserwisowej, sieci komputerowe">
+                                OOP, algorithms and data structures, microservice architecture fundamentals, computer networks
                             </dd>
                         </div>
 
                         <div>
                             <dt data-i18n-pl="Współpraca">Collaboration</dt>
-                            <dd data-i18n-pl="Organizacja pracy zespołu, komunikacja, priorytetyzacja, Scrum">
-                                Team coordination, communication, prioritisation, Scrum
+                            <dd data-i18n-pl="Organizacja pracy zespołu, komunikacja, priorytetyzacja">
+                                Team coordination, communication, prioritisation
                             </dd>
                         </div>
 
@@ -225,13 +250,13 @@
                     </article>
                     <article class="skill-card">
                         <h3 data-i18n-pl="Interfejsy internetowe">Web interfaces</h3>
-                        <p data-i18n-pl="Tworzę responsywne strony i interfejsy połączone z API. Pracuję z formularzami i sesjami użytkownika, korzystam z JavaScript, Reacta i PHP." class="skill-card__lead">I build responsive pages and interfaces connected to APIs. I work with forms and user sessions using JavaScript, React and PHP.</p>
+                        <p data-i18n-pl="Tworzę responsywne strony i interfejsy połączone z API w JavaScript i React. Znam podstawy PHP: obsługę formularzy, sesje użytkownika i zapis danych w CSV." class="skill-card__lead">I build responsive pages and interfaces connected to APIs using JavaScript and React. I know PHP basics: form handling, user sessions and storing data in CSV files.</p>
                         <ul class="skill-tags">
                             <li> HTML5 / CSS3 </li>
                             <li> JavaScript </li>
                             <li> React / TypeScript </li>
                             <li> Vite </li>
-                            <li> PHP </li>
+                            <li data-i18n-pl="Podstawy PHP"> PHP basics </li>
                             <li data-i18n-pl="Podstawy HTTP"> HTTP basics </li>
                             <li data-i18n-pl="Responsywne interfejsy"> Responsive interfaces </li>
                         </ul>
@@ -245,7 +270,8 @@
                             <li> MariaDB </li>
                             <li data-i18n-pl="Projektowanie schematów"> Schema design </li>
                             <li data-i18n-pl="Modelowanie relacyjne"> Relational data modelling </li>
-                            <li data-i18n-pl="Transakcje / CRUD"> Transactions / CRUD </li>
+                            <li data-i18n-pl="Operacje CRUD"> CRUD operations </li>
+                            <li data-i18n-pl="Transakcje bazodanowe"> Database transactions </li>
                             <li data-i18n-pl="Integracja z API"> API integration </li>
                             <li> JSON </li>
                             <li data-i18n-pl="Konfiguracja zewnętrzna"> Externalised configuration </li>
@@ -253,7 +279,7 @@
                     </article>
                     <article class="skill-card">
                         <h3 data-i18n-pl="Narzędzia i środowisko pracy">Tools and environments</h3>
-                        <p data-i18n-pl="Pracuję z Linuxem, Dockerem i narzędziami do budowania projektów. Konfiguruję środowiska aplikacji i serwery, analizuję logi i rozwiązuję problemy z uruchamianiem. Lubię rozumieć, jak kod działa w praktyce." class="skill-card__lead">I work with Linux, Docker and project build tools. I configure application environments and servers, analyse logs and troubleshoot issues when running applications. I like understanding how code works in practice.</p>
+                        <p data-i18n-pl="Pracuję z Linuxem, Dockerem i narzędziami do budowania projektów. Konfiguruję środowiska aplikacji i serwery, analizuję logi i rozwiązuję problemy z uruchamianiem." class="skill-card__lead">I work with Linux, Docker and project build tools. I configure application environments and servers, analyse logs and troubleshoot issues when running applications.</p>
                         <ul class="skill-tags">
                             <li> Linux </li>
                             <li> Docker / Compose </li>
@@ -283,13 +309,23 @@
                     </article>
                     -->
                     <article class="skill-card">
+                        <h3 data-i18n-pl="Sieci komputerowe">Computer networks</h3>
+                        <p data-i18n-pl="Na kursie CCNA: Introduction to Networks poznałem podstawy TCP/IP, adresacji IPv4/IPv6 i podziału sieci na podsieci. Potrafię skonfigurować podstawowe ustawienia routerów i przełączników oraz diagnozować problemy z łącznością w małej sieci." class="skill-card__lead">Through CCNA: Introduction to Networks, I learned TCP/IP fundamentals, IPv4/IPv6 addressing and subnetting. I can configure basic router and switch settings and troubleshoot connectivity in a small network.</p>
+                        <ul class="skill-tags">
+                            <li> TCP/IP </li>
+                            <li> IPv4 / IPv6 </li>
+                            <li data-i18n-pl="Podsieci"> Subnetting </li>
+                            <li data-i18n-pl="Routery i przełączniki"> Routers and switches </li>
+                            <li data-i18n-pl="Diagnostyka sieci"> Network troubleshooting </li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
                         <h3 data-i18n-pl="Inne obszary techniczne">Other technical areas</h3>
-                        <p data-i18n-pl="Znam algorytmy, struktury danych i założenia architektury mikroserwisowej. Mam też podstawy sieci komputerowych i architektury klient-serwer. Poznałem C#, C++ i podstawy asemblera." class="skill-card__lead">I understand algorithms, data structures and the principles of microservice architecture. I also have a grounding in computer networks and client-server architecture, and have worked with C#, C++ and basic assembly.</p>
+                        <p data-i18n-pl="Znam algorytmy i struktury danych oraz podstawy architektury mikroserwisowej i klient-serwer. Poznałem podstawy C#, C++ i asemblera." class="skill-card__lead">I understand algorithms and data structures, along with the fundamentals of microservice and client-server architecture. I have also learned the basics of C#, C++ and assembly.</p>
                         <ul class="skill-tags">
                             <li data-i18n-pl="Algorytmy"> Algorithms </li>
                             <li data-i18n-pl="Struktury danych"> Data structures </li>
-                            <li data-i18n-pl="Mikroserwisy"> Microservices </li>
-                            <li data-i18n-pl="Podstawy sieci komputerowych"> Computer networks basics </li>
+                            <li data-i18n-pl="Podstawy architektury mikroserwisowej"> Microservice architecture fundamentals </li>
                             <li data-i18n-pl="Architektura klient-serwer"> Client-server architecture </li>
                             <li> C# </li>
                             <li> C++ </li>
@@ -301,7 +337,7 @@
                         <p data-i18n-pl="Potrafię samodzielnie wyszukać i przeanalizować informacje, rozłożyć problem na mniejsze części i zaproponować rozwiązanie. Chętnie sięgam do dokumentacji i poznaję narzędzia potrzebne do danego zadania." class="skill-card__lead">I can independently find and analyse information, break a problem into smaller parts and propose a solution. I turn to documentation and learn the tools a task calls for.</p>
                         <ul class="skill-tags">
                             <li data-i18n-pl="Analiza informacji"> Information analysis </li>
-                            <li data-i18n-pl="Samodzielność"> Initiative </li>
+                            <li data-i18n-pl="Samodzielność"> Independent working </li>
                             <li data-i18n-pl="Uczenie się"> Learning </li>
                         </ul>
                     </article>
@@ -312,13 +348,12 @@
                             <li data-i18n-pl="Praca zespołowa"> Teamwork </li>
                             <li data-i18n-pl="Komunikacja"> Communication </li>
                             <li data-i18n-pl="Priorytetyzacja"> Prioritisation </li>
-                            <li> Scrum </li>
                             <li data-i18n-pl="Organizacja pracy"> Work organisation </li>
                         </ul>
                     </article>
                     <article class="skill-card">
                         <h3 data-i18n-pl="AI w codziennej pracy">AI in everyday work</h3>
-                        <p data-i18n-pl="Na co dzień korzystam z Claude'a, Codexa i innych agentów AI w pracy programistycznej. Potrafię jasno określić zadanie i poprowadzić pracę z agentem tak, by szybciej przechodzić od pomysłu do rozwiązania i zrobić więcej w krótszym czasie." class="skill-card__lead">I use Claude, Codex and other AI agents in my daily programming work. I can define tasks clearly and guide an agent's work to move from idea to solution faster and get more done in less time.</p>
+                        <p data-i18n-pl="Na co dzień wykorzystuję Claude'a, Codexa i inne narzędzia AI do usprawniania pracy programistycznej. Pomagają mi szybciej analizować problemy, pisać i refaktoryzować kod oraz poznawać nowe rozwiązania. Świadomie korzystam z generowanych sugestii, rozumiejąc ich działanie i weryfikując poprawność kodu." class="skill-card__lead">I use Claude, Codex and other AI tools to improve my development workflow. They help me analyze problems, write and refactor code, and explore new solutions more efficiently. I critically evaluate AI-generated suggestions, ensuring I understand the code and verify its correctness.</p>
                         <ul class="skill-tags">
                             <li> Claude </li>
                             <li> Codex </li>
@@ -392,13 +427,13 @@
                                     <li> TypeScript </li>
                                 </ul>
                                 <div class="project-links two-links">
-                                    <a href="https://github.com/macieserafin/currency-monitor-api" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <a href="https://github.com/macieserafin/currency-monitor" target="_blank" rel="noopener noreferrer">GitHub</a>
                                     <a href="https://currency.macieserafin.pl" target="_blank" rel="noopener noreferrer" data-i18n-pl="Otwórz aplikację" aria-label="Open Currency Monitor" data-i18n-pl-aria-label="Otwórz Currency Monitor">Open app</a>
                                 </div>
                             </article>
                             <article class="project-card">
                                 <div class="project-title-row">
-                                    <h4>Library Management API</h4>
+                                    <h4>Library Management</h4>
                                     <span class="project-badge">Java / Spring Boot REST API</span>
                                 </div>
                                 <p data-i18n-pl="Backend REST do zarządzania książkami, użytkownikami, bibliotekami, wypożyczeniami i zwrotami. Obejmuje filtrowanie książek, sprawdzanie ich dostępności przed wypożyczeniem, zapis danych w PostgreSQL, obsługę wyjątków i dokumentację OpenAPI."> REST backend for managing books, users, libraries, loans, and returns. Includes book filtering, checks against lending an already borrowed book, PostgreSQL persistence, exception handling, and OpenAPI documentation. </p>
@@ -416,7 +451,7 @@
                             </article>
                             <article class="project-card">
                                 <div class="project-title-row">
-                                    <h4>Task Manager API</h4>
+                                    <h4>Task Manager</h4>
                                     <span class="project-badge" data-i18n-pl="Java / Aplikacja Spring Boot">Java / Spring Boot Web App</span>
                                 </div>
                                 <p data-i18n-pl="API zadań z rejestracją, stroną logowania Thymeleaf i uwierzytelnianiem Spring Security. Użytkownicy mogą przeglądać, tworzyć i usuwać własne zadania. Zarządzanie użytkownikami i dokumentacja OpenAPI wymagają roli administratora. Projekt wykorzystuje walidację DTO, ochronę CSRF, JPA i H2."> Task management API with registration, a Thymeleaf login page, and Spring Security authentication. Users can list, create, and delete their own tasks; user management and OpenAPI documentation require the admin role. Uses DTO validation, CSRF protection, JPA, and H2. </p>

@@ -813,6 +813,46 @@ main {
     line-height: 1.30;
 }
 
+.certificates-panel {
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface-soft);
+}
+
+.certificates-panel h2 {
+    margin-bottom: 14px;
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 1.2rem;
+}
+
+.certificate-entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px 24px;
+}
+
+.certificate-entry__details {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.certificate-entry h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.certificate-entry p {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.certificate-entry .btn {
+    max-width: 100%;
+}
+
 .certificate-layout {
     display: flex;
     justify-content: center;
