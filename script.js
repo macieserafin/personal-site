@@ -199,3 +199,65 @@ const yearElement = document.getElementById('year');
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
+
+// Google Analytics loads only after explicit consent; the choice can be changed from the footer.
+const cookieBanner = document.querySelector('.cookie-banner');
+const analyticsId = 'G-K9XFK9G1ZJ';
+let analyticsLoaded = false;
+
+function readConsent() {
+    try {
+        const consent = localStorage.getItem('portfolio-analytics-consent');
+        return consent === 'granted' || consent === 'denied' ? consent : null;
+    } catch {
+        return null;
+    }
+}
+
+function applyConsent(consent) {
+    if (consent === 'granted') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        if (!analyticsLoaded) {
+            const gtagScript = document.createElement('script');
+            gtagScript.async = true;
+            gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`;
+            document.head.append(gtagScript);
+            analyticsLoaded = true;
+        }
+        return;
+    }
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+    document.cookie.split(';').map((cookie) => cookie.split('=')[0].trim())
+        .filter((name) => name.startsWith('_ga'))
+        .forEach((name) => {
+            [location.hostname, `.${location.hostname.replace(/^www\./, '')}`].forEach((domain) => {
+                document.cookie = `${name}=; Max-Age=0; path=/; domain=${domain}`;
+            });
+            document.cookie = `${name}=; Max-Age=0; path=/`;
+        });
+}
+
+function showCookieBanner() {
+    if (!cookieBanner) return;
+    cookieBanner.hidden = false;
+    cookieBanner.querySelector('[data-cookie-choice="granted"]').focus({ preventScroll: true });
+}
+
+if (cookieBanner) {
+    cookieBanner.querySelectorAll('[data-cookie-choice]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const consent = button.dataset.cookieChoice;
+            try { localStorage.setItem('portfolio-analytics-consent', consent); } catch {}
+            applyConsent(consent);
+            cookieBanner.hidden = true;
+        });
+    });
+    document.querySelector('[data-cookie-settings]')?.addEventListener('click', showCookieBanner);
+
+    const savedConsent = readConsent();
+    if (savedConsent) {
+        applyConsent(savedConsent);
+    } else {
+        cookieBanner.hidden = false;
+    }
+}

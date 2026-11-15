@@ -18,7 +18,7 @@
                 "@id": "https://macieserafin.pl/#person",
                 "name": "Maciej Serafin",
                 "url": "https://macieserafin.pl/",
-                "sameAs": ["https://github.com/macieserafin"]
+                "sameAs": ["https://github.com/macieserafin", "https://www.linkedin.com/in/maciej-serafin-4b2739174/"]
             },
             {
                 "@type": "SoftwareApplication",
@@ -56,10 +56,11 @@
         })();
     </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9XFK9G1ZJ"></script>
+    <!-- gtag.js is loaded by script.js only after the visitor accepts analytics cookies. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
       gtag('js', new Date());
 
       gtag('config', 'G-K9XFK9G1ZJ');
@@ -68,7 +69,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
     <header class="site-header">
@@ -145,6 +146,7 @@
                     <img src="your-photo.jpg" alt="Portrait of Maciej Serafin" data-i18n-pl-alt="Zdjęcie Macieja Serafina" class="profile-photo">
                     <div class="profile-links">
                         <a href="https://github.com/macieserafin" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/maciej-serafin-4b2739174/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         <a href="#contact" data-i18n-pl="E-mail">Email</a>
                     </div>
                 </div>
@@ -183,7 +185,8 @@
                     <article class="timeline-item">
                         <div class="timeline-content">
                             <h3 data-i18n-pl="PJATK, Gdańsk">PJATK, Gdansk</h3>
-                            <p data-i18n-pl="Studiuję informatykę w Polsko-Japońskiej Akademii Technik Komputerowych.">Currently studying Computer Science at the Polish-Japanese Academy of Information Technology.</p>
+                            <p data-i18n-pl="Studiuję informatykę w Polsko-Japońskiej Akademii Technik Komputerowych: studia inżynierskie stacjonarne, specjalizacja Cyberbezpieczeństwo, obecnie 5. semestr z 7.">Studying Computer Science at the Polish-Japanese Academy of Information Technology: a full-time engineering degree with a specialisation in Cybersecurity, currently in semester 5 of 7.</p>
+                            <p data-i18n-pl="Należę do Koła Naukowego AI na PJATK.">I'm a member of the AI Scientific Club at PJATK.</p>
                         </div>
                         <span class="timeline-date" data-i18n-pl="2024 - obecnie">2024 - Present</span>
                     </article>
@@ -228,14 +231,13 @@
                         </div>
 
                         <div>
-                            <!-- <dt data-i18n-pl="Dane i testy">Data and testing</dt> -->
-                            <dt data-i18n-pl="Dane">Data</dt>
-                            <dd>SQL, PostgreSQL, MariaDB, JPA/Hibernate, Flyway<!-- , JUnit, Mockito, MockMvc --></dd>
+                            <dt data-i18n-pl="Dane i testy">Data and testing</dt>
+                            <dd>SQL, PostgreSQL, MariaDB, JPA/Hibernate, Flyway, JUnit 5, Mockito, MockMvc, Testcontainers, Vitest, Playwright</dd>
                         </div>
 
                         <div>
                             <dt data-i18n-pl="DevOps i CI/CD">DevOps &amp; CI/CD</dt>
-                            <dd data-i18n-pl="Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD, Testcontainers, Playwright, Prometheus / Alertmanager, kopie zapasowe (restic), Let's Encrypt">Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD, Testcontainers, Playwright, Prometheus / Alertmanager, backups (restic), Let's Encrypt</dd>
+                            <dd data-i18n-pl="Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD, Prometheus / Alertmanager, kopie zapasowe (restic), Let's Encrypt">Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD, Prometheus / Alertmanager, backups (restic), Let's Encrypt</dd>
                         </div>
 
                         <div>
@@ -250,15 +252,20 @@
 
                         <div>
                             <dt data-i18n-pl="Informatyka">Computer Science</dt>
-                            <dd data-i18n-pl="OOP, algorytmy i struktury danych, podstawy architektury mikroserwisowej, sieci komputerowe">
-                                OOP, algorithms and data structures, microservice architecture fundamentals, computer networks
+                            <dd data-i18n-pl="OOP, algorytmy i struktury danych, architektura klient-serwer, sieci komputerowe">
+                                OOP, algorithms and data structures, client-server architecture, computer networks
                             </dd>
                         </div>
 
                         <div>
+                            <dt data-i18n-pl="Języki">Languages</dt>
+                            <dd data-i18n-pl="Angielski B2">English B2</dd>
+                        </div>
+
+                        <div>
                             <dt data-i18n-pl="Współpraca">Collaboration</dt>
-                            <dd data-i18n-pl="Organizacja pracy zespołu, komunikacja, priorytetyzacja">
-                                Team coordination, communication, prioritisation
+                            <dd data-i18n-pl="Organizacja pracy zespołu, komunikacja, priorytetyzacja, Scrum, Jira">
+                                Team coordination, communication, prioritisation, Scrum, Jira
                             </dd>
                         </div>
 
@@ -338,26 +345,26 @@
                             <li> Bash / CLI </li>
                             <li data-i18n-pl="Administracja VPS"> VPS management </li>
                             <li data-i18n-pl="Wdrażanie aplikacji"> App deployment </li>
-                            <li> Testcontainers </li>
-                            <li> Playwright </li>
                             <li> Prometheus / Alertmanager </li>
                             <li data-i18n-pl="Kopie zapasowe (restic)"> Backups (restic) </li>
                             <li> Let's Encrypt </li>
                         </ul>
                     </article>
-                    <!--
                     <article class="skill-card">
                         <h3 data-i18n-pl="Testowanie">Testing</h3>
-                        <p data-i18n-pl="Piszę testy logiki aplikacji, endpointów i operacji na bazie danych. W Helpdesku sprawdzam m.in. logowanie, uprawnienia i pełny przebieg obsługi zgłoszenia." class="skill-card__lead">I write tests for application logic, endpoints and database operations. In Helpdesk, I test login, permissions and the complete ticket workflow.</p>
+                        <p data-i18n-pl="Piszę testy logiki aplikacji, endpointów i operacji na bazie danych. W HourForge testy integracyjne działają na prawdziwym PostgreSQL w Testcontainers, a frontend ma testy komponentów i end-to-end. W Helpdesku sprawdzam m.in. logowanie, uprawnienia i pełny przebieg obsługi zgłoszenia." class="skill-card__lead">I write tests for application logic, endpoints and database operations. In HourForge, integration tests run against a real PostgreSQL in Testcontainers, and the frontend has component and end-to-end tests. In Helpdesk, I test login, permissions and the complete ticket workflow.</p>
                         <ul class="skill-tags">
                             <li> JUnit 5 </li>
                             <li> Mockito </li>
                             <li> MockMvc </li>
+                            <li> Testcontainers </li>
+                            <li> Vitest </li>
+                            <li> Playwright </li>
                             <li data-i18n-pl="Testy jednostkowe"> Unit tests </li>
                             <li data-i18n-pl="Testy integracyjne"> Integration tests </li>
+                            <li data-i18n-pl="Testy end-to-end"> End-to-end tests </li>
                         </ul>
                     </article>
-                    -->
                     <article class="skill-card">
                         <h3 data-i18n-pl="Sieci komputerowe">Computer networks</h3>
                         <p data-i18n-pl="Na kursie CCNA: Introduction to Networks poznałem podstawy TCP/IP, adresacji IPv4/IPv6 i podziału sieci na podsieci. Potrafię skonfigurować podstawowe ustawienia routerów i przełączników oraz diagnozować problemy z łącznością w małej sieci." class="skill-card__lead">Through CCNA: Introduction to Networks, I learned TCP/IP fundamentals, IPv4/IPv6 addressing and subnetting. I can configure basic router and switch settings and troubleshoot connectivity in a small network.</p>
@@ -371,11 +378,11 @@
                     </article>
                     <article class="skill-card">
                         <h3 data-i18n-pl="Inne obszary techniczne">Other technical areas</h3>
-                        <p data-i18n-pl="Znam algorytmy i struktury danych oraz podstawy architektury mikroserwisowej i klient-serwer. Poznałem podstawy C#, C++ i asemblera." class="skill-card__lead">I understand algorithms and data structures, along with the fundamentals of microservice and client-server architecture. I have also learned the basics of C#, C++ and assembly.</p>
+                        <p data-i18n-pl="Znam algorytmy i struktury danych oraz architekturę klient-serwer. Na studiach poznałem podstawy architektury mikroserwisowej, a także podstawy C#, C++ i asemblera." class="skill-card__lead">I understand algorithms and data structures and client-server architecture. At university, I learned the fundamentals of microservice architecture and the basics of C#, C++ and assembly.</p>
                         <ul class="skill-tags">
                             <li data-i18n-pl="Algorytmy"> Algorithms </li>
                             <li data-i18n-pl="Struktury danych"> Data structures </li>
-                            <li data-i18n-pl="Podstawy architektury mikroserwisowej"> Microservice architecture fundamentals </li>
+                            <li data-i18n-pl="Podstawy mikroserwisów (studia)"> Microservice fundamentals (coursework) </li>
                             <li data-i18n-pl="Architektura klient-serwer"> Client-server architecture </li>
                             <li> C# </li>
                             <li> C++ </li>
@@ -479,6 +486,40 @@
                             </div>
                         </article>
                     </section>
+                    <section class="project-group" aria-labelledby="team-project-title">
+                        <div class="project-group-head">
+                            <h3 id="team-project-title" data-i18n-pl="Projekt zespołowy">Team project</h3>
+                            <p data-i18n-pl="Projekt tworzony w kilkuosobowym zespole, w Scrumie, z zadaniami w Jirze.">A project built by a small team using Scrum, with tasks tracked in Jira.</p>
+                        </div>
+                        <div class="project-grid">
+                            <article class="project-card project-card--primary">
+                                <div class="project-title-row">
+                                    <h4>Serwio</h4>
+                                    <span class="project-badge" data-i18n-pl="Zespół / Aplikacja full stack, w toku">Team / Full-stack app, in progress</span>
+                                </div>
+                                <p data-i18n-pl="Platforma do obsługi zleceń serwisowych dla właścicieli obiektów, firm serwisowych i serwisantów. Budujemy ją w zespole 3–4 osób; obecnie powstaje MVP.">A platform for managing service orders for asset owners, service companies and technicians. We're building it as a team of 3–4 people; the MVP is in progress.</p>
+                                <ul class="project-features">
+                                    <li data-i18n-pl="Napisałem specyfikację wymagań, słownik pojęć i model danych (diagram ERD)."> I wrote the requirements specification, glossary and data model (ERD). </li>
+                                    <li data-i18n-pl="Zbudowałem dużą część backendu: logowanie, obiekty i lokalizacje właściciela, firmy, oddziały i serwisantów, tygodniową dostępność lokalizacji oraz tworzenie zleceń."> I built much of the backend: authentication, owners' locations and assets, companies, branches and technicians, weekly location availability and order creation. </li>
+                                    <li data-i18n-pl="Pracujemy w Scrumie z zadaniami w Jirze, na osobnych gałęziach i przez pull requesty; scalam pracę zespołu."> We work in Scrum with tasks in Jira, on separate branches and through pull requests; I integrate the team's work. </li>
+                                </ul>
+                                <ul class="tag-list">
+                                    <li> Java 21 </li>
+                                    <li> Spring Boot 4 </li>
+                                    <li> Spring Security </li>
+                                    <li> Spring Data JPA </li>
+                                    <li> PostgreSQL </li>
+                                    <li> React </li>
+                                    <li> TypeScript </li>
+                                    <li> Scrum </li>
+                                    <li> Jira </li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/serwio-team/serwio" target="_blank" rel="noopener noreferrer" aria-label="Serwio on GitHub" data-i18n-pl-aria-label="Serwio na GitHubie">GitHub</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
                     <section class="project-group" aria-labelledby="java-projects-title">
                         <div class="project-group-head">
                             <h3 id="java-projects-title" data-i18n-pl="Projekty w Javie">Java Projects</h3>
@@ -506,9 +547,11 @@
                                     <li> Vite </li>
                                     <li> Docker Compose </li>
                                 </ul>
-                                <div class="project-links two-links">
+                                <div class="project-links">
                                     <a href="https://github.com/macieserafin/helpdesk" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <!-- Demo hidden while helpdesk.macieserafin.pl is offline; restore with class "two-links".
                                     <a href="https://helpdesk.macieserafin.pl" target="_blank" rel="noopener noreferrer" data-i18n-pl="Otwórz aplikację" aria-label="Open Helpdesk" data-i18n-pl-aria-label="Otwórz Helpdesk">Open app</a>
+                                    -->
                                 </div>
                             </article>
                             <article class="project-card project-card--primary">
@@ -535,9 +578,32 @@
                                     <li> React </li>
                                     <li> TypeScript </li>
                                 </ul>
-                                <div class="project-links two-links">
+                                <div class="project-links">
                                     <a href="https://github.com/macieserafin/currency-monitor" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <!-- Demo hidden while currency.macieserafin.pl is offline; restore with class "two-links".
                                     <a href="https://currency.macieserafin.pl" target="_blank" rel="noopener noreferrer" data-i18n-pl="Otwórz aplikację" aria-label="Open Currency Monitor" data-i18n-pl-aria-label="Otwórz Currency Monitor">Open app</a>
+                                    -->
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <div class="project-title-row">
+                                    <h4>Train Assistant</h4>
+                                    <span class="project-badge" data-i18n-pl="Java / Aplikacja webowa i iOS">Java / Web and iOS app</span>
+                                </div>
+                                <p data-i18n-pl="Wyszukiwarka stacji i połączeń kolejowych oparta na API rozkładów PKP. Ten sam interfejs działa w przeglądarce i jako aplikacja iOS (Capacitor). Backend w Spring Boot ukrywa klucz API, waliduje zapytania i zamienia błędy zewnętrznej usługi (limit zapytań, TLS, timeout) na czytelne komunikaty. Wdrożenie na VPS z GitHub Actions.">A station and train connection search based on the PKP timetable API. The same interface runs in the browser and as an iOS app (Capacitor). The Spring Boot backend keeps the API key private, validates queries and turns upstream errors (rate limits, TLS, timeouts) into clear messages. Deployed to a VPS with GitHub Actions.</p>
+                                <ul class="tag-list">
+                                    <li> Java 21 </li>
+                                    <li> Spring Boot 4 </li>
+                                    <li> RestClient </li>
+                                    <li> JavaScript </li>
+                                    <li> Capacitor </li>
+                                    <li> iOS </li>
+                                    <li> Docker Compose </li>
+                                    <li> Nginx </li>
+                                    <li> GitHub Actions </li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/macieserafin/train-assistant" target="_blank" rel="noopener noreferrer" aria-label="Train Assistant on GitHub" data-i18n-pl-aria-label="Train Assistant na GitHubie">GitHub</a>
                                 </div>
                             </article>
                             <article class="project-card">
@@ -752,7 +818,10 @@
                 <div class="contact-card">
                     <h2 data-i18n-pl="Kontakt">Contact</h2>
                     <p data-i18n-pl="Szukam praktyk lub pierwszej pracy w IT. Jeśli chcesz porozmawiać o moich projektach lub masz propozycję współpracy, napisz do mnie.">I'm looking for an internship or my first role in IT. If you'd like to talk about my projects or a job opportunity, feel free to email me.</p>
-                    <a href="mailto:macieserafin@gmail.com">macieserafin@gmail.com</a>
+                    <div class="contact-links">
+                        <a href="mailto:macieserafin@gmail.com">macieserafin@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/maciej-serafin-4b2739174/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -760,8 +829,18 @@
 
     <footer class="site-footer">
         <p>&copy; <span id="year"></span> Maciej Serafin. <span data-i18n-pl="Wszelkie prawa zastrzeżone.">All rights reserved.</span></p>
+        <button type="button" class="site-footer__cookies" data-cookie-settings data-i18n-pl="Ustawienia cookies">Cookie settings</button>
     </footer>
 
-    <script src="script.js?v=7"></script>
+    <section class="cookie-banner" aria-labelledby="cookie-banner-title" hidden>
+        <h2 id="cookie-banner-title" class="cookie-banner__title" data-i18n-pl="Pliki cookies">Cookies</h2>
+        <p data-i18n-pl="Za Twoją zgodą używam Google Analytics, żeby sprawdzać, ile osób odwiedza tę stronę. Bez zgody nie zapisuję żadnych analitycznych plików cookies.">With your consent, I use Google Analytics to see how many people visit this site. Without consent, no analytics cookies are stored.</p>
+        <div class="cookie-banner__actions">
+            <button type="button" class="btn btn-ghost" data-cookie-choice="denied" data-i18n-pl="Odrzuć">Decline</button>
+            <button type="button" class="btn btn-primary" data-cookie-choice="granted" data-i18n-pl="Akceptuj">Accept</button>
+        </div>
+    </section>
+
+    <script src="script.js?v=8"></script>
 </body>
 </html>

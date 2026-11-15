@@ -1154,6 +1154,70 @@ button:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.profile-links a:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+}
+
+.site-footer__cookies {
+    margin-top: 6px;
+    min-height: 44px;
+    padding: 0 6px;
+    font: inherit;
+    color: var(--muted);
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+.site-footer__cookies:hover,
+.site-footer__cookies:focus-visible {
+    color: var(--brand-strong);
+}
+
+.cookie-banner {
+    position: fixed;
+    z-index: 30;
+    right: 16px;
+    bottom: 16px;
+    width: min(420px, calc(100% - 32px));
+    padding: 18px;
+    display: grid;
+    gap: 10px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+}
+
+.cookie-banner[hidden] {
+    display: none;
+}
+
+.cookie-banner__title {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 1.05rem;
+}
+
+.cookie-banner p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.cookie-banner__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
 .project-title-row h4,
 .tag-list li,
 .skill-tags li,
