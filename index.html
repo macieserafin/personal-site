@@ -3,8 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maciej Serafin - Java, Spring Boot, REST APIs, PostgreSQL and Docker. Software projects, technical skills and professional background." data-i18n-pl-content="Maciej Serafin - Java, Spring Boot, REST API, PostgreSQL i Docker. Projekty programistyczne, umiejętności techniczne i doświadczenie zawodowe.">
+    <meta name="description" content="Maciej Serafin - Java, Spring Boot, REST APIs, PostgreSQL and Docker. Author of HourForge, an open-source time-tracking app for teams. Projects, skills and professional background." data-i18n-pl-content="Maciej Serafin - Java, Spring Boot, REST API, PostgreSQL i Docker. Autor HourForge, open source'owej aplikacji do śledzenia czasu pracy zespołów. Projekty, umiejętności i doświadczenie.">
+    <meta property="og:title" content="Maciej Serafin">
+    <meta property="og:description" content="Maciej Serafin - Java, Spring Boot, REST APIs, PostgreSQL and Docker. Author of HourForge, an open-source time-tracking app for teams. Projects, skills and professional background." data-i18n-pl-content="Maciej Serafin - Java, Spring Boot, REST API, PostgreSQL i Docker. Autor HourForge, open source'owej aplikacji do śledzenia czasu pracy zespołów. Projekty, umiejętności i doświadczenie.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://macieserafin.pl/">
     <title>Maciej Serafin</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://macieserafin.pl/#person",
+                "name": "Maciej Serafin",
+                "url": "https://macieserafin.pl/",
+                "sameAs": ["https://github.com/macieserafin"]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://hourforge.pl/#app",
+                "name": "HourForge",
+                "url": "https://hourforge.pl",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "PLN"
+                },
+                "author": { "@id": "https://macieserafin.pl/#person" },
+                "license": "https://opensource.org/licenses/MIT"
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "HourForge",
+                "codeRepository": "https://github.com/macieserafin/hour-forge",
+                "license": "https://opensource.org/licenses/MIT",
+                "author": { "@id": "https://macieserafin.pl/#person" },
+                "targetProduct": { "@id": "https://hourforge.pl/#app" }
+            }
+        ]
+    }
+    </script>
     <script>
         (() => {
             let theme;
@@ -27,7 +68,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=14">
+    <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
     <header class="site-header">
@@ -76,6 +117,7 @@
                     <div class="hero-actions">
                         <a href="#skills" class="btn btn-primary" data-i18n-pl="Moje umiejętności">My skills</a>
                         <a href="#projects" class="btn btn-ghost" data-i18n-pl="Zobacz projekty">View projects</a>
+                        <a href="#hourforge" class="btn btn-ghost" data-i18n-pl="Zobacz HourForge">See HourForge</a>
                     </div>
                 </div>
                 <aside class="hero-card" aria-labelledby="technical-scope-title">
@@ -177,7 +219,7 @@
 
                         <div>
                             <dt data-i18n-pl="Programowanie">Programming</dt>
-                            <dd>Java, Spring Boot, Spring Security, REST API, JavaScript, React, TypeScript, HTML/CSS</dd>
+                            <dd data-i18n-pl="Java, Spring Boot, Spring Security, OAuth 2.0 / OpenID Connect, uwierzytelnianie dwuskładnikowe (TOTP), REST API, JavaScript, React, TypeScript, HTML/CSS">Java, Spring Boot, Spring Security, OAuth 2.0 / OpenID Connect, two-factor authentication (TOTP), REST API, JavaScript, React, TypeScript, HTML/CSS</dd>
                         </div>
 
                         <div>
@@ -188,12 +230,12 @@
                         <div>
                             <!-- <dt data-i18n-pl="Dane i testy">Data and testing</dt> -->
                             <dt data-i18n-pl="Dane">Data</dt>
-                            <dd>SQL, PostgreSQL, MariaDB, JPA/Hibernate<!-- , JUnit, Mockito, MockMvc --></dd>
+                            <dd>SQL, PostgreSQL, MariaDB, JPA/Hibernate, Flyway<!-- , JUnit, Mockito, MockMvc --></dd>
                         </div>
 
                         <div>
                             <dt data-i18n-pl="DevOps i CI/CD">DevOps &amp; CI/CD</dt>
-                            <dd>Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD</dd>
+                            <dd data-i18n-pl="Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD, Testcontainers, Playwright, Prometheus / Alertmanager, kopie zapasowe (restic), Let's Encrypt">Docker, Docker Compose, GitHub Actions, GHCR, Linux, Bash, SSH, VPS, Nginx, Caddy, CI/CD, Testcontainers, Playwright, Prometheus / Alertmanager, backups (restic), Let's Encrypt</dd>
                         </div>
 
                         <div>
@@ -246,6 +288,8 @@
                             <li> Spring Security </li>
                             <li> Spring Data JPA </li>
                             <li> JPA / Hibernate </li>
+                            <li> OAuth 2.0 / OpenID Connect </li>
+                            <li data-i18n-pl="Uwierzytelnianie dwuskładnikowe (TOTP)"> Two-factor authentication (TOTP) </li>
                         </ul>
                     </article>
                     <article class="skill-card">
@@ -268,6 +312,7 @@
                             <li> SQL </li>
                             <li> PostgreSQL </li>
                             <li> MariaDB </li>
+                            <li> Flyway </li>
                             <li data-i18n-pl="Projektowanie schematów"> Schema design </li>
                             <li data-i18n-pl="Modelowanie relacyjne"> Relational data modelling </li>
                             <li data-i18n-pl="Operacje CRUD"> CRUD operations </li>
@@ -293,6 +338,11 @@
                             <li> Bash / CLI </li>
                             <li data-i18n-pl="Administracja VPS"> VPS management </li>
                             <li data-i18n-pl="Wdrażanie aplikacji"> App deployment </li>
+                            <li> Testcontainers </li>
+                            <li> Playwright </li>
+                            <li> Prometheus / Alertmanager </li>
+                            <li data-i18n-pl="Kopie zapasowe (restic)"> Backups (restic) </li>
+                            <li> Let's Encrypt </li>
                         </ul>
                     </article>
                     <!--
@@ -370,6 +420,65 @@
                     <p data-i18n-pl="Publiczne projekty: backend w Javie, interfejsy internetowe, aplikacje desktopowe i gry.">Public projects covering Java backend development, web interfaces, desktop applications, and games.</p>
                 </header>
                 <div class="project-groups">
+                    <section class="project-group" aria-labelledby="flagship-project-title">
+                        <div class="project-group-head">
+                            <h3 id="flagship-project-title" data-i18n-pl="Projekt flagowy">Flagship project</h3>
+                            <p data-i18n-pl="Mój największy projekt: od pomysłu i kodu po wdrożenie, bezpieczeństwo i utrzymanie publicznej aplikacji.">My largest project: from idea and code to deployment, security and running a public app.</p>
+                        </div>
+                        <article class="project-card project-card--primary project-card--flagship" id="hourforge">
+                            <div class="project-title-row">
+                                <h4>HourForge</h4>
+                                <span class="project-badge" data-i18n-pl="Projekt flagowy / Aplikacja SaaS open source">Flagship project / Open-source SaaS</span>
+                            </div>
+                            <div class="project-flagship__body">
+                                <div class="project-flagship__main">
+                                    <p data-i18n-pl="Aplikacja do śledzenia czasu pracy dla małych zespołów, którą samodzielnie zaprojektowałem, zbudowałem i wdrożyłem na produkcję. Działa publicznie pod hourforge.pl, a jej kod jest otwarty na licencji MIT, więc każdy może ją też uruchomić na własnym serwerze.">A time-tracking app for small teams that I designed, built and deployed to production on my own. It runs publicly at hourforge.pl, and its code is open source under the MIT license, so anyone can also run it on their own server.</p>
+                                    <!-- Screenshot placeholder (needs assets/hourforge-dashboard.webp, ~1600x1000 px, 16:10):
+                                    <img class="project-flagship__image" src="assets/hourforge-dashboard.webp" width="1600" height="1000" loading="lazy" alt="HourForge dashboard with time-tracking charts" data-i18n-pl-alt="Pulpit HourForge z wykresami czasu pracy">
+                                    -->
+                                    <h5 data-i18n-pl="Co potrafi">What it does</h5>
+                                    <ul class="project-features">
+                                        <li data-i18n-pl="Timery i wpisy ręczne z opisem, tagami i szablonami; zespoły z rolami właściciela, administratora i członka oraz zaproszeniami przez link."> Timers and manual entries with descriptions, tags and templates; teams with owner, admin and member roles and invitation links. </li>
+                                        <li data-i18n-pl="Pulpity i raporty z wykresami oraz eksportem do CSV, XLSX i PDF."> Dashboards and reports with charts and export to CSV, XLSX and PDF. </li>
+                                        <li data-i18n-pl="Logowanie przez Google (OAuth 2.0 / OpenID Connect z PKCE) i integracja z Jira Cloud (OAuth 2.0 3LO, tokeny szyfrowane AES-256-GCM)."> Sign-in with Google (OAuth 2.0 / OpenID Connect with PKCE) and a Jira Cloud integration (OAuth 2.0 3LO, tokens encrypted with AES-256-GCM). </li>
+                                        <li data-i18n-pl="Bezpieczeństwo kont: potwierdzanie adresu e-mail, reset hasła, dwuetapowe logowanie (TOTP) z kodami zapasowymi, lista aktywnych sesji i limity prób logowania."> Account security: e-mail confirmation, password reset, two-step sign-in (TOTP) with backup codes, a list of active sessions and sign-in rate limits. </li>
+                                        <li data-i18n-pl="Zgodność z RODO: eksport własnych danych, usunięcie konta z anonimizacją, polityka prywatności i rejestr czynności przetwarzania; panel operatora instancji."> GDPR-ready: personal data export, account deletion with anonymisation, a privacy policy and a record of processing activities; an operator panel for the instance. </li>
+                                    </ul>
+                                </div>
+                                <div class="project-flagship__side">
+                                    <h5 data-i18n-pl="Inżynieria i wdrożenie">Engineering and delivery</h5>
+                                    <ul class="project-features">
+                                        <li data-i18n-pl="Backend w Javie 21 i Spring Boot 4 (Spring Security, JPA, Flyway), baza PostgreSQL 18; frontend w React 19, TypeScript i Vite."> Backend in Java 21 and Spring Boot 4 (Spring Security, JPA, Flyway) with PostgreSQL 18; frontend in React 19, TypeScript and Vite. </li>
+                                        <li data-i18n-pl="Ponad 1000 testów backendu, w tym 827 testów integracyjnych na prawdziwym PostgreSQL (Testcontainers), oraz testy komponentów (Vitest) i end-to-end (Playwright)."> Over 1,000 backend tests, including 827 integration tests against a real PostgreSQL (Testcontainers), plus component (Vitest) and end-to-end (Playwright) tests. </li>
+                                        <li data-i18n-pl="CI w GitHub Actions: testy, SBOM, skan sekretów i skan podatności zależności oraz obrazów (Trivy), publikacja obrazów Dockera do GHCR."> CI in GitHub Actions: tests, SBOM, secret scanning and vulnerability scans of dependencies and images (Trivy), publishing Docker images to GHCR. </li>
+                                        <li data-i18n-pl="Produkcja na VPS: Docker Compose, Caddy z automatycznym HTTPS i ścisłymi nagłówkami bezpieczeństwa, osobne konto bazy do migracji, szyfrowane kopie zapasowe, monitoring Prometheus z alertami e-mail."> Production on a VPS: Docker Compose, Caddy with automatic HTTPS and strict security headers, a separate database account for migrations, encrypted backups and Prometheus monitoring with e-mail alerts. </li>
+                                        <li data-i18n-pl="Poczta transakcyjna z kolejką i ponowieniami, skonfigurowana z SPF, DKIM i DMARC."> Transactional e-mail with a queue and retries, set up with SPF, DKIM and DMARC. </li>
+                                    </ul>
+                                    <ul class="tag-list">
+                                        <li> Java 21 </li>
+                                        <li> Spring Boot 4 </li>
+                                        <li> Spring Security </li>
+                                        <li> PostgreSQL </li>
+                                        <li> Flyway </li>
+                                        <li> React </li>
+                                        <li> TypeScript </li>
+                                        <li> Vite </li>
+                                        <li> OAuth 2.0 </li>
+                                        <li> Docker Compose </li>
+                                        <li> Caddy </li>
+                                        <li> GitHub Actions </li>
+                                        <li> Testcontainers </li>
+                                        <li> Playwright </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-links three-links">
+                                <a href="https://hourforge.pl" target="_blank" rel="noopener noreferrer" data-i18n-pl="Otwórz aplikację" aria-label="Open HourForge" data-i18n-pl-aria-label="Otwórz HourForge">Open app</a>
+                                <a href="https://github.com/macieserafin/hour-forge" target="_blank" rel="noopener noreferrer" aria-label="HourForge on GitHub" data-i18n-pl-aria-label="HourForge na GitHubie">GitHub</a>
+                                <a href="https://github.com/macieserafin/hour-forge/blob/main/docs/self-hosting.md" target="_blank" rel="noopener noreferrer" data-i18n-pl="Jak uruchomić u siebie" aria-label="How to self-host HourForge" data-i18n-pl-aria-label="Jak uruchomić HourForge u siebie">Self-hosting guide</a>
+                            </div>
+                        </article>
+                    </section>
                     <section class="project-group" aria-labelledby="java-projects-title">
                         <div class="project-group-head">
                             <h3 id="java-projects-title" data-i18n-pl="Projekty w Javie">Java Projects</h3>

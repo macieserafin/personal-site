@@ -1122,6 +1122,38 @@ button:focus-visible {
     color: var(--brand);
 }
 
+.project-card--flagship {
+    gap: 14px;
+    scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+.project-card--flagship .project-title-row h4 {
+    font-size: 1.4rem;
+}
+
+.project-flagship__body {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 32px;
+}
+
+.project-flagship__main,
+.project-flagship__side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-flagship__body h5 {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 0.95rem;
+    color: var(--brand-strong);
+}
+
+.project-links.three-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .project-title-row h4,
 .tag-list li,
 .skill-tags li,
@@ -1238,7 +1270,8 @@ button:focus-visible {
     }
 
     .about-layout,
-    .project-grid {
+    .project-grid,
+    .project-flagship__body {
         grid-template-columns: 1fr;
     }
 
@@ -1377,7 +1410,8 @@ button:focus-visible {
         font-size: 1rem;
     }
 
-    .project-links.two-links {
+    .project-links.two-links,
+    .project-links.three-links {
         grid-template-columns: 1fr;
     }
 }
