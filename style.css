@@ -1154,6 +1154,33 @@ button:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.club-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 20px 32px;
+    align-items: start;
+}
+
+.club-panel__intro {
+    display: grid;
+    gap: 10px;
+}
+
+.club-panel__intro h3 {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 1.22rem;
+}
+
+.club-panel__intro p {
+    color: var(--muted);
+}
+
+.club-panel__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .profile-links a:last-child:nth-child(odd) {
     grid-column: 1 / -1;
 }
@@ -1335,7 +1362,8 @@ button:focus-visible {
 
     .about-layout,
     .project-grid,
-    .project-flagship__body {
+    .project-flagship__body,
+    .club-panel {
         grid-template-columns: 1fr;
     }
 
