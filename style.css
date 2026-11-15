@@ -1156,9 +1156,21 @@ button:focus-visible {
 
 .club-panel {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-    gap: 20px 32px;
+    gap: 20px;
+}
+
+.club-panel__head {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 20px;
     align-items: start;
+}
+
+.club-panel__logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
 }
 
 .club-panel__intro {
@@ -1166,19 +1178,118 @@ button:focus-visible {
     gap: 10px;
 }
 
-.club-panel__intro h3 {
+.club-panel__intro h3,
+.club-posts h4 {
     font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.club-panel__intro h3 {
     font-size: 1.22rem;
 }
 
 .club-panel__intro p {
     color: var(--muted);
+    max-width: 75ch;
 }
 
 .club-panel__links {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.club-pillars {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.club-pillars li {
+    display: grid;
+    gap: 4px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brand);
+    border-radius: var(--radius-sm);
+    background: var(--surface-soft);
+}
+
+.club-pillars strong {
+    color: var(--brand-strong);
+}
+
+.club-pillars span {
+    color: var(--muted);
+    font-size: 0.93rem;
+}
+
+.club-panel__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.club-posts {
+    display: grid;
+    gap: 12px;
+}
+
+.club-posts h4 {
+    font-size: 1rem;
+}
+
+.club-posts__grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.club-post {
+    display: grid;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    overflow: hidden;
+    background: var(--surface-soft);
+    transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.club-post:hover,
+.club-post:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--line-strong);
+}
+
+.club-post__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.club-post__meta {
+    display: grid;
+    gap: 2px;
+    padding: 10px 12px 12px;
+}
+
+.club-post__meta time {
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.club-post__title {
+    font-weight: 700;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: var(--brand-strong);
 }
 
 .profile-links a:last-child:nth-child(odd) {
@@ -1301,6 +1412,10 @@ button:focus-visible {
 }
 
 @media (max-width: 960px) {
+    .club-panel__body {
+        grid-template-columns: 1fr;
+    }
+
     .hero-layout {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -1363,7 +1478,7 @@ button:focus-visible {
     .about-layout,
     .project-grid,
     .project-flagship__body,
-    .club-panel {
+    .club-pillars {
         grid-template-columns: 1fr;
     }
 
@@ -1505,6 +1620,19 @@ button:focus-visible {
     .project-links.two-links,
     .project-links.three-links {
         grid-template-columns: 1fr;
+    }
+
+    .club-panel__head {
+        grid-template-columns: 1fr;
+    }
+
+    .club-panel__logo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .club-posts__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

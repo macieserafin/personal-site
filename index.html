@@ -69,7 +69,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=17">
+    <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
     <header class="site-header">
@@ -216,37 +216,84 @@
                     <p data-i18n-pl="Poza własnymi projektami pracuję w zespole koła naukowego AI na PJATK.">Besides my own projects, I work with the AI student research club at PJATK.</p>
                 </header>
                 <div class="project-group club-panel">
-                    <div class="club-panel__intro">
-                        <h3>PJATK{AI}</h3>
-                        <p data-i18n-pl="Jestem członkiem PJATK{AI}, koła naukowego sztucznej inteligencji na PJATK. Razem z innymi członkami tworzę projekty koła i przy okazji uczę się pracy w większym zespole.">I'm a member of PJATK{AI}, the artificial intelligence student research club at PJATK. I build club projects with other members and learn how to work in a larger team.</p>
-                        <div class="club-panel__links">
-                            <a href="https://www.instagram.com/pjatk.ai" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" aria-label="PJATK{AI} on Instagram" data-i18n-pl-aria-label="PJATK{AI} na Instagramie">Instagram</a>
-                            <a href="https://www.linkedin.com/company/pjatk-ai/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" aria-label="PJATK{AI} on LinkedIn" data-i18n-pl-aria-label="PJATK{AI} na LinkedInie">LinkedIn</a>
+                    <div class="club-panel__head">
+                        <img class="club-panel__logo" src="assets/club/logo.png" width="96" height="96" alt="PJATK{AI} logo" data-i18n-pl-alt="Logo PJATK{AI}">
+                        <div class="club-panel__intro">
+                            <h3>PJATK{AI}</h3>
+                            <p data-i18n-pl="Jestem członkiem PJATK{AI}, koła naukowego sztucznej inteligencji na PJATK w Gdańsku. Razem z innymi członkami tworzę projekty koła, jeżdżę na meetupy i konferencje oraz uczę się pracy w większym zespole.">I'm a member of PJATK{AI}, the artificial intelligence student research club at PJATK in Gdańsk. With other members, I build club projects, go to meetups and conferences and learn how to work in a larger team.</p>
+                            <div class="club-panel__links">
+                                <a href="https://www.instagram.com/pjatk.ai" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" aria-label="PJATK{AI} on Instagram" data-i18n-pl-aria-label="PJATK{AI} na Instagramie">Instagram</a>
+                                <a href="https://www.linkedin.com/company/pjatk-ai/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" aria-label="PJATK{AI} on LinkedIn" data-i18n-pl-aria-label="PJATK{AI} na LinkedInie">LinkedIn</a>
+                            </div>
                         </div>
                     </div>
-                    <article class="project-card">
-                        <div class="project-title-row">
-                            <h4>SLLAPP</h4>
-                            <span class="project-badge" data-i18n-pl="Projekt koła / Aplikacja webowa, w toku">Club project / Web app, in progress</span>
+                    <ul class="club-pillars">
+                        <li>
+                            <strong>AI in Hand</strong>
+                            <span data-i18n-pl="Zespołowe projekty i prototypy z AI.">Team projects and AI prototypes.</span>
+                        </li>
+                        <li>
+                            <strong>AI Travel</strong>
+                            <span data-i18n-pl="Wspólne wyjazdy na konferencje i meetupy.">Trips to conferences and meetups.</span>
+                        </li>
+                        <li>
+                            <strong>AI Meetup</strong>
+                            <span data-i18n-pl="Prelekcje i warsztaty z ekspertami na uczelni.">Talks and workshops with experts at the university.</span>
+                        </li>
+                    </ul>
+                    <div class="club-panel__body">
+                        <article class="project-card">
+                            <div class="project-title-row">
+                                <h4>SLLAPP</h4>
+                                <span class="project-badge" data-i18n-pl="Projekt koła, w toku">Club project, in progress</span>
+                            </div>
+                            <p data-i18n-pl="Aplikacja do nauki języka migowego, którą rozwijamy w kole na ScienceCom 2026. Projekt jest na wczesnym etapie; aktualny stan znajdziesz w repozytorium.">A sign language learning app we're building in the club for ScienceCom 2026. It's at an early stage; see the repository for its current state.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/PJATK-AI/SLLAPP-ScienceCom-2026" target="_blank" rel="noopener noreferrer" data-i18n-pl="Zobacz na GitHubie" aria-label="SLLAPP on GitHub" data-i18n-pl-aria-label="SLLAPP na GitHubie">View on GitHub</a>
+                            </div>
+                        </article>
+                        <div class="club-posts">
+                            <h4 data-i18n-pl="Ostatnio na Instagramie koła">Latest on the club's Instagram</h4>
+                            <ul class="club-posts__grid">
+                            <li>
+                                <a class="club-post" href="https://www.instagram.com/p/Dfor310FYt3/" target="_blank" rel="noopener noreferrer">
+                                    <img class="club-post__image" src="assets/club/meetup-claude-community.jpg" width="576" height="720" loading="lazy" alt="A full room listening to a talk at the Claude Community Trójmiasto #2 meetup" data-i18n-pl-alt="Sala pełna słuchaczy podczas prelekcji na meetupie Claude Community Trójmiasto #2">
+                                    <span class="club-post__meta">
+                                        <time datetime="2026-11-12" data-i18n-pl="12 listopada 2026">12 November 2026</time>
+                                        <span class="club-post__title" data-i18n-pl="Meetup Claude Community Trójmiasto #2">Claude Community Trójmiasto #2 meetup</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="club-post" href="https://www.instagram.com/p/DfmR_qBiOnl/" target="_blank" rel="noopener noreferrer">
+                                    <img class="club-post__image" src="assets/club/pydata-trojmiasto.jpg" width="576" height="720" loading="lazy" alt="PJATK{AI} members at the PyData Trójmiasto meetup in Gdynia" data-i18n-pl-alt="Członkowie PJATK{AI} na spotkaniu PyData Trójmiasto w Gdyni">
+                                    <span class="club-post__meta">
+                                        <time datetime="2026-11-11" data-i18n-pl="11 listopada 2026">11 November 2026</time>
+                                        <span class="club-post__title" data-i18n-pl="Wyjazd na PyData Trójmiasto w Gdyni">Trip to PyData Trójmiasto in Gdynia</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="club-post" href="https://www.instagram.com/p/DfjwsVeCNmG/" target="_blank" rel="noopener noreferrer">
+                                    <img class="club-post__image" src="assets/club/team-2026.jpg" width="576" height="720" loading="lazy" alt="PJATK{AI} “Meet our team” graphic for the 2026/27 academic year" data-i18n-pl-alt="Grafika „Poznaj nasz team” PJATK{AI} na rok akademicki 2026/27">
+                                    <span class="club-post__meta">
+                                        <time datetime="2026-11-10" data-i18n-pl="10 listopada 2026">10 November 2026</time>
+                                        <span class="club-post__title" data-i18n-pl="Zespół koła na rok 2026/27">The club team for 2026/27</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="club-post" href="https://www.instagram.com/p/Dfjuw_hCPPM/" target="_blank" rel="noopener noreferrer">
+                                    <img class="club-post__image" src="assets/club/welcome.jpg" width="576" height="720" loading="lazy" alt="PJATK{AI} “Everything you need to know about us” graphic" data-i18n-pl-alt="Grafika „Wszystko, co musisz o nas wiedzieć” PJATK{AI}">
+                                    <span class="club-post__meta">
+                                        <time datetime="2026-11-10" data-i18n-pl="10 listopada 2026">10 November 2026</time>
+                                        <span class="club-post__title" data-i18n-pl="PJATK{AI} w 6 slajdach">PJATK{AI} in 6 slides</span>
+                                    </span>
+                                </a>
+                            </li>
+                            </ul>
                         </div>
-                        <p data-i18n-pl="Aplikacja do nauki języka migowego, którą tworzymy w kole na ScienceCom 2026. Frontend w Vue 3 i TypeScript rozpoznaje dłonie z kamery za pomocą MediaPipe Hand Landmarker.">A sign language learning app we're building in the club for ScienceCom 2026. The Vue 3 and TypeScript frontend detects hands from the camera with MediaPipe Hand Landmarker.</p>
-                        <ul class="project-features">
-                            <li data-i18n-pl="Przygotowałem backend w Spring Boot (Java 21) z zapisem wyników gry i rankingu w SQLite."> I set up the Spring Boot (Java 21) backend that stores game results and the ranking in SQLite. </li>
-                            <li data-i18n-pl="Dodałem CI backendu w GitHub Actions i opis sposobu pracy w repozytorium dla agentów AI."> I added backend CI in GitHub Actions and a workflow guide for AI agents working in the repository. </li>
-                        </ul>
-                        <ul class="tag-list">
-                            <li> Java 21 </li>
-                            <li> Spring Boot </li>
-                            <li> SQLite </li>
-                            <li> Vue 3 </li>
-                            <li> TypeScript </li>
-                            <li> MediaPipe </li>
-                            <li> GitHub Actions </li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/PJATK-AI/SLLAPP-ScienceCom-2026" target="_blank" rel="noopener noreferrer" aria-label="SLLAPP on GitHub" data-i18n-pl-aria-label="SLLAPP na GitHubie">GitHub</a>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
