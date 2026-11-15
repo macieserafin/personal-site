@@ -110,9 +110,23 @@ main {
     font-size: 1rem;
 }
 
+.section-head h2::after {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 3px;
+    margin: 10px auto 0;
+    border-radius: 1000px;
+    background: var(--brand);
+}
+
 .section-head-left {
     text-align: left;
     margin-bottom: 1rem;
+}
+
+.section-head-left h2::after {
+    margin-left: 0;
 }
 
 .section-head-left p {
@@ -382,10 +396,12 @@ main {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 9px;
+    margin-top: 22px;
 }
 
 .hero-metrics li {
     border: 1px solid var(--line);
+    border-top: 3px solid var(--brand);
     background: var(--surface-soft);
     border-radius: var(--radius-sm);
     padding: 10px 12px;
@@ -457,20 +473,12 @@ main {
 }
 
 .focus-list li {
-    position: relative;
-    padding-left: 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brand);
+    border-radius: var(--radius-sm);
+    background: var(--surface-soft);
     color: var(--muted);
-}
-
-.focus-list li::before {
-    content: "";
-    position: absolute;
-    top: 0.62em;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    border-radius: 1000px;
-    background: var(--brand);
 }
 
 .focus-list strong {
@@ -1150,6 +1158,32 @@ button:focus-visible {
     color: var(--brand-strong);
 }
 
+.project-flagship__shot {
+    margin: 4px 0;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.project-flagship__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.skill-card__icon {
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--brand-soft);
+    color: var(--brand-strong);
+}
+
 .project-links.three-links {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1623,6 +1657,10 @@ button:focus-visible {
     }
 
     .club-panel__head {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-metrics {
         grid-template-columns: 1fr;
     }
 
