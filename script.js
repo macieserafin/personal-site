@@ -261,3 +261,10 @@ if (cookieBanner) {
         cookieBanner.hidden = false;
     }
 }
+
+const gameVideo = document.querySelector('.game-video');
+if (gameVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    gameVideo.removeAttribute('autoplay');
+    gameVideo.pause();
+    gameVideo.controls = true;
+}

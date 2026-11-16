@@ -1688,3 +1688,153 @@ button:focus-visible {
         scroll-behavior: auto !important;
     }
 }
+
+/* Game showcase */
+.game-panel {
+    display: grid;
+    gap: 24px;
+}
+
+.game-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: center;
+}
+
+.game-hero__text {
+    display: grid;
+    gap: 12px;
+}
+
+.game-hero__text h3 {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.game-tagline {
+    color: var(--brand-strong);
+    font-weight: 600;
+}
+
+.game-badges {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.game-badges li {
+    padding: 4px 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--brand-soft);
+    color: var(--brand-strong);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.game-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.game-note {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.game-hero__media {
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.game-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    image-rendering: pixelated;
+    background: #101412;
+}
+
+.game-hero__media figcaption,
+.game-shots span {
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+.game-shots {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.game-shots li {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+}
+
+.game-shots img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-shots li:hover img {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.game-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.game-features li {
+    display: grid;
+    gap: 4px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brand);
+    border-radius: var(--radius-sm);
+    background: var(--surface-soft);
+}
+
+.game-features strong {
+    color: var(--brand-strong);
+}
+
+.game-features span {
+    color: var(--muted);
+    font-size: 0.93rem;
+}
+
+@media (max-width: 900px) {
+    .game-hero,
+    .game-shots,
+    .game-features {
+        grid-template-columns: 1fr;
+    }
+
+    .game-hero__media {
+        order: -1;
+    }
+}

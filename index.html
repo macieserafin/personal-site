@@ -82,7 +82,7 @@
                     <li><a href="#education" data-i18n-pl="Edukacja i praca">Background</a></li>
                     <li><a href="#ai-club" data-i18n-pl="Koło naukowe">AI club</a></li>
                     <li><a href="#skills" data-i18n-pl="Umiejętności">Skills</a></li>
-
+                    <li><a href="#game" data-i18n-pl="Gra">Game</a></li>
                     <li><a href="#projects" data-i18n-pl="Projekty">Projects</a></li>
                     <li><a href="#contact" data-i18n-pl="Kontakt">Contact</a></li>
                 </ul>
@@ -533,6 +533,71 @@
                 </div>
             </div>
         </section>
+        <section id="game" class="section game" aria-labelledby="game-title">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="game-title" data-i18n-pl="Moja gra">My game</h2>
+                    <p data-i18n-pl="Poza backendem robię grę, w której wszystko, od renderowania po mikser dźwięku, napisałem sam, bez silnika gier.">Besides backend work, I'm building a game where everything, from rendering to the audio mixer, is written by me, with no game engine.</p>
+                </header>
+                <div class="project-group game-panel">
+                    <div class="game-hero">
+                        <div class="game-hero__text">
+                            <ul class="game-badges">
+                                <li>Java 21</li>
+                                <li data-i18n-pl="Własny silnik">Custom engine</li>
+                                <li data-i18n-pl="Beta w 2027">Beta 2027</li>
+                                <li data-i18n-pl="Steam wkrótce">Steam soon</li>
+                            </ul>
+                            <h3>Sisyphus the Mushroom</h3>
+                            <p class="game-tagline" data-i18n-pl="Spadnij w lesie, obudź się w wiosce, wróć silniejszy.">Fall in the forest, wake up in the village, go back in stronger.</p>
+                            <p data-i18n-pl="Akcyjne RPG 2D z widokiem z góry i ręcznie rysowaną pixel artem. Upadek nie kończy rozgrywki: budzisz się ponownie, zachowujesz postęp i wyruszasz w las nieco silniejszy. Pierwszy rozdział prowadzi od prologu, przez spokojną wioskę i jej mieszkańców, do pierwszego bossa, Króla Szlamu.">A top-down 2D action RPG in hand-made pixel art. Falling in the forest doesn't end the run: you wake up again, keep your progress and head back out a little stronger. The first chapter runs from the prologue, through a quiet village and its people, to the first boss, the Slime King.</p>
+                            <div class="game-actions">
+                                <a href="https://github.com/macieserafin/sisyphus-the-mushroom-game/releases/latest/download/SisyphusTheMushroom-Demo.jar" class="btn btn-primary" data-i18n-pl="Pobierz demo (.jar)">Download the demo (.jar)</a>
+                                <a href="https://github.com/macieserafin/sisyphus-the-mushroom-game" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" aria-label="Sisyphus the Mushroom on GitHub" data-i18n-pl-aria-label="Sisyphus the Mushroom na GitHubie">GitHub</a>
+                            </div>
+                            <p class="game-note" data-i18n-pl="Windows, macOS i Linux · ok. 166 MB · wymaga Javy 21 lub nowszej. W demo: samouczek i walka z Królem Szlamu na czas.">Windows, macOS and Linux · about 166 MB · needs Java 21 or newer. The demo has a guided tutorial and a timed fight against the Slime King.</p>
+                        </div>
+                        <figure class="game-hero__media">
+                            <video class="game-video" src="assets/sisyphus/day-night.mp4" poster="assets/sisyphus/day-night-poster.webp" width="768" height="576" autoplay muted loop playsinline preload="metadata" aria-label="The village across a full in-game day, from night to dawn to dusk" data-i18n-pl-aria-label="Wioska w ciągu całej doby w grze: od nocy, przez świt, do zmierzchu"></video>
+                            <figcaption data-i18n-pl="Wioska w ciągu jednej doby w grze. Obraz z działającej gry, nie makieta.">The village across one in-game day. Live rendering, no mock-ups.</figcaption>
+                        </figure>
+                    </div>
+                    <ul class="game-shots">
+                        <li>
+                            <img src="assets/sisyphus/village-night.webp" width="1280" height="720" loading="lazy" alt="The village square at night, lit by lamps" data-i18n-pl-alt="Plac wioski nocą, oświetlony lampami">
+                            <span data-i18n-pl="Wioska nocą">The village at night</span>
+                        </li>
+                        <li>
+                            <img src="assets/sisyphus/boss.webp" width="1280" height="720" loading="lazy" alt="The Slime King boss fight, second phase" data-i18n-pl-alt="Walka z bossem Królem Szlamu, druga faza">
+                            <span data-i18n-pl="Król Szlamu: boss w trzech fazach">Slime King: a three-phase boss</span>
+                        </li>
+                        <li>
+                            <img src="assets/sisyphus/forest.webp" width="1280" height="720" loading="lazy" alt="A forest trail in the evening" data-i18n-pl-alt="Leśna ścieżka wieczorem">
+                            <span data-i18n-pl="Las ze ścieżkami i minimapą">Forest trails and a minimap</span>
+                        </li>
+                    </ul>
+                    <ul class="game-features">
+                        <li>
+                            <strong data-i18n-pl="Walka z rytmem zmian broni">Combat with a swap rhythm</strong>
+                            <span data-i18n-pl="Miecz, ciężki miecz, pistolet i strzelba. Zmiana broni w trakcie walki daje bonus do obrażeń, a ataki dystansowe oznaczają wrogów, których detonuje się wręcz.">Short sword, heavy sword, pistol and shotgun. Swapping mid-fight gives a damage bonus, and ranged hits mark enemies that melee attacks detonate.</span>
+                        </li>
+                        <li>
+                            <strong data-i18n-pl="Żywy świat">A living world</strong>
+                            <span data-i18n-pl="Pełny cykl dnia i nocy z lokalnym oświetleniem, wioska z mieszkańcami, którzy reagują na twoje czyny, oraz las z mapą i skrótami.">A full day and night cycle with local lighting, a village whose residents react to what you do, and a forest with a map and shortcuts.</span>
+                        </li>
+                        <li>
+                            <strong data-i18n-pl="Własna ścieżka dźwiękowa">Original soundtrack</strong>
+                            <span data-i18n-pl="Dziesiątki utworów i efektów stworzonych własnym syntezatorem: osobny motyw dla każdego miejsca i fazy bossa.">Dozens of tracks and effects made with a custom synthesizer: a theme for each place and boss phase.</span>
+                        </li>
+                        <li>
+                            <strong data-i18n-pl="Inżynieria bez silnika">Engineering without an engine</strong>
+                            <span data-i18n-pl="Własny mikser PCM, CPU-owy potok oświetlenia, wersjonowane zapisy z migracją i ok. 28 000 linii kodu w Javie z testami uruchamianymi w CI.">A custom PCM mixer, a CPU lighting pipeline, versioned saves with migration and about 28,000 lines of Java, with tests running in CI.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="section">
             <div class="container">
                 <header class="section-head">
